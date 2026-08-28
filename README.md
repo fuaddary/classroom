@@ -1,58 +1,59 @@
-# 🎓 myITS Classroom — Panduan Prompting AI
+# myITS Classroom — Panduan Prompting AI
 
-> **Pemrograman Web (ET234305)** — Departemen Teknologi Informasi, ITS  
-> Dosen Pengampu: **Fuad Dary Rosyadi, S.Kom., M.Kom.**
+Pemrograman Web (ET234305) — Departemen Teknologi Informasi, ITS
+Dosen Pengampu: Fuad Dary Rosyadi, S.Kom., M.Kom.
 
-Panduan ini berisi **prompt AI siap pakai + template HTML siap tempel** untuk setiap komponen myITS Classroom (Moodle), lengkap dengan contoh hasil dan pratinjau tampilan.
+Panduan ini berisi prompt AI siap pakai dan template HTML siap tempel untuk setiap komponen myITS Classroom (Moodle), lengkap dengan contoh hasil dan pratinjau tampilan.
 
-> ⚠️ **Prinsip penting:** AI membantu menyusun draf — dosen tetap wajib memverifikasi terutama referensi/pustaka, angka bobot penilaian, dan ketepatan materi teknis sebelum dipublikasikan ke mahasiswa.
-
----
-
-## ⚡ Quick Start — 3 Langkah
-
-```
-1. Temukan komponen yang ingin diisi dari Daftar Isi di bawah
-2. Salin prompt → tempel ke AI (Claude/ChatGPT/Gemini) + lampirkan RPS
-3. Salin HTML hasil → di Moodle klik ikon </> Edit HTML source → tempel → Save
-```
+> **Catatan penting:** AI membantu menyusun draf. Dosen tetap wajib memverifikasi terutama referensi/pustaka, angka bobot penilaian, dan ketepatan materi teknis sebelum dipublikasikan ke mahasiswa.
 
 ---
 
-## 📖 Daftar Isi
+## Cara Pakai
 
-**A. Konten Wajib/Anjuran**
+1. Temukan komponen yang ingin diisi dari Daftar Isi di bawah.
+2. Salin prompt, tempel ke AI (Claude/ChatGPT/Gemini), dan lampirkan RPS sebagai konteks.
+3. Salin HTML hasil, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
+
+---
+
+## Daftar Isi
+
+**A. Konten Wajib / Anjuran**
+
 1. [Identitas & Informasi Umum Mata Kuliah](#1-identitas--informasi-umum-mata-kuliah)
-2. [RPS](#2-rps-rencana-pembelajaran-semester)
-3. [Kontrak Perkuliahan / Tata Tertib](#3-kontrak-perkuliahan--tata-tertib-kelas)
+2. [RPS (Rencana Pembelajaran Semester)](#2-rps-rencana-pembelajaran-semester)
+3. [Kontrak Perkuliahan / Tata Tertib Kelas](#3-kontrak-perkuliahan--tata-tertib-kelas)
 4. [Materi Pembelajaran per Pertemuan](#4-materi-pembelajaran-per-pertemuan)
-5. [Referensi / Bacaan Tambahan](#5-referensi--bacaan-tambahan)
+5. [Referensi & Bacaan Tambahan](#5-referensi--bacaan-tambahan)
 6. [Rubrik Penilaian](#6-rubrik-penilaian)
 7. [Pengumuman](#7-pengumuman)
 8. [Jadwal & Linimasa Perkuliahan](#8-jadwal--linimasa-perkuliahan)
 
 **B. Aktivitas Pembelajaran**
+
 9. [Forum Diskusi](#9-forum-diskusi)
 10. [Penugasan (Assignment)](#10-penugasan-assignment)
-11. [Kuis / Evaluasi Formatif ⭐ (7 jenis soal + XML)](#11-kuis--evaluasi-formatif)
+11. [Kuis / Evaluasi Formatif (7 jenis soal + Moodle XML)](#11-kuis--evaluasi-formatif)
 12. [Presensi Daring](#12-presensi-daring)
 13. [ETS & EAS](#13-ets--eas)
 14. [Sesi Sinkron (Live Session)](#14-sesi-sinkron-live-session)
 15. [Survei / Umpan Balik](#15-survei--umpan-balik)
 
 **C. Referensi**
-- [Tips Prompting Efektif](#-tips-prompting-efektif)
+
+- [Tips Prompting Efektif](#tips-prompting-efektif)
 
 ---
 
-## 🗂️ Struktur Repositori
+## Struktur Repositori
 
 ```
 classroom/
-├── README.md                        ← Panduan lengkap (file ini)
-├── moodle-html-per-bagian/          ← 15 file HTML fragment siap tempel Moodle
-├── moodle-quiz-xml/                 ← 8 file XML soal kuis siap import (21 soal)
-│   ├── 00-bank-soal-lengkap.xml     ← Semua jenis dalam 1 file
+├── README.md                        Panduan lengkap (file ini)
+├── moodle-html-per-bagian/          15 file HTML fragment siap tempel Moodle
+├── moodle-quiz-xml/                 8 file XML soal kuis siap import (21 soal)
+│   ├── 00-bank-soal-lengkap.xml     Semua jenis dalam 1 file
 │   ├── 01-pilihan-ganda.xml
 │   ├── 02-checkbox-multi-jawaban.xml
 │   ├── 03-mencocokkan.xml
@@ -60,25 +61,20 @@ classroom/
 │   ├── 05-isian-singkat.xml
 │   ├── 06-esai.xml
 │   └── 07-drag-drop-teks.xml
-├── screenshot-preview/              ← Pratinjau tampilan tiap bagian di Moodle
-├── info-kelas-pemrograman-web.html
-├── info-kelas-pemrograman-web-moodle.html
-└── dekorasi-kelas-ti-its.html
+└── screenshot-preview/              Pratinjau tampilan tiap bagian di Moodle
 ```
 
 ---
 
 ## A. Konten Wajib / Anjuran
 
-
-
 ### 1. Identitas & Informasi Umum Mata Kuliah
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
-Blok identitas: nama MK, kode, SKS, dosen pengampu, deskripsi singkat, kontak & jam konsultasi.
+Blok identitas: nama MK, kode, SKS, dosen pengampu, deskripsi singkat, kontak dan jam konsultasi.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Saya dosen pengampu MK "Pemrograman Web" (ET234305) di Departemen Teknologi
@@ -91,9 +87,9 @@ kontak/jam konsultasi. Hasilkan dalam format HTML dengan inline style
 siap ditempel ke Edit HTML source Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -112,34 +108,32 @@ siap ditempel ke Edit HTML source Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![1. Identitas & Informasi Umum Mata Kuliah](screenshot-preview/01-identitas.png)
 
 ---
-
-
 ### 2. RPS (Rencana Pembelajaran Semester)
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
 Ringkasan navigasi RPS: CPL yang dibebankan, CPMK, bahan kajian, dan komponen evaluasi beserta bobot.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Berikut file RPS resmi MK Pemrograman Web [lampirkan PDF/DOCX RPS].
 
 Buatkan ringkasan RPS dalam bentuk poin-poin terstruktur untuk
 ditampilkan di section pengantar myITS Classroom (bukan menggantikan
-dokumen RPS aslinya — hanya ringkasan navigasi): CPL yang dibebankan,
+dokumen RPS aslinya -- hanya ringkasan navigasi): CPL yang dibebankan,
 daftar CPMK, daftar bahan kajian, dan komponen evaluasi beserta
 bobotnya. Hasilkan dalam format HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -160,20 +154,18 @@ bobotnya. Hasilkan dalam format HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![2. RPS (Rencana Pembelajaran Semester)](screenshot-preview/02-rps.png)
 
 ---
-
-
 ### 3. Kontrak Perkuliahan / Tata Tertib Kelas
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
-Aturan kehadiran, etika kelas, kebijakan keterlambatan pengumpulan, dan sanksi akademik.
+Aturan kehadiran, etika kelas, kebijakan keterlambatan pengumpulan tugas, dan sanksi akademik.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Buatkan draf kontrak perkuliahan / tata tertib kelas untuk MK Pemrograman
@@ -183,9 +175,9 @@ sanksi akademik (plagiarisme kode). Gaya bahasa formal tapi tidak kaku,
 maksimal 6 poin. Hasilkan dalam format HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -202,20 +194,18 @@ maksimal 6 poin. Hasilkan dalam format HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![3. Kontrak Perkuliahan / Tata Tertib Kelas](screenshot-preview/03-kontrak.png)
 
 ---
-
-
 ### 4. Materi Pembelajaran per Pertemuan
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
-Outline materi per pertemuan: judul section, 4–6 subtopik berurutan, poin diskusi pemantik.
+Outline materi per pertemuan: judul section, 4-6 subtopik berurutan, poin diskusi pemantik di akhir.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Berdasarkan RPS minggu ke-6 dengan topik "Membuat Aplikasi Web dengan
@@ -225,9 +215,9 @@ materi/slide: judul section Moodle, 4-6 subtopik berurutan, dan 1 poin
 diskusi pemantik di akhir. Hasilkan HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -246,32 +236,30 @@ diskusi pemantik di akhir. Hasilkan HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![4. Materi Pembelajaran per Pertemuan](screenshot-preview/04-materi.png)
 
 ---
-
-
 ### 5. Referensi & Bacaan Tambahan
 
-> **Status:** 🔵 Anjuran
+**Status:** Anjuran
 
-Kategori referensi tambahan per topik — kata kunci pencarian (bukan judul/URL yang dikarang AI).
+Kategori referensi tambahan per topik disertai kata kunci pencarian untuk diverifikasi manual (bukan judul/URL yang dikarang AI).
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Untuk topik "JavaScript dan DOM" pada MK Pemrograman Web, sarankan 3
 kategori referensi tambahan (dokumentasi resmi, artikel/tutorial teknis,
 studi kasus industri) beserta alasan relevansinya. JANGAN mengarang
-judul/penulis/tautan — beri kata kunci pencarian saja agar diverifikasi
+judul/penulis/tautan -- beri kata kunci pencarian saja agar diverifikasi
 manual. Hasilkan HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -286,20 +274,18 @@ manual. Hasilkan HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![5. Referensi & Bacaan Tambahan](screenshot-preview/05-referensi.png)
 
 ---
-
-
 ### 6. Rubrik Penilaian
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
-Tabel rubrik: 4 kriteria penilaian, 4 level capaian (Kurang/Cukup/Baik/Sangat Baik), bobot per kriteria.
+Tabel rubrik: 4 kriteria penilaian, 4 level capaian (Kurang/Cukup/Baik/Sangat Baik), bobot skor per kriteria.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Buatkan rubrik penilaian untuk Tugas 2 MK Pemrograman Web (topik: aplikasi
@@ -308,9 +294,9 @@ capaian (Kurang/Cukup/Baik/Sangat Baik), dan bobot skor tiap kriteria.
 Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -326,20 +312,18 @@ Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![6. Rubrik Penilaian](screenshot-preview/06-rubrik.png)
 
 ---
-
-
 ### 7. Pengumuman
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
-Template pengumuman di forum Announcement Moodle — pengingat tenggat dan poin teknis wajib.
+Template pengumuman di forum Announcement Moodle -- pengingat tenggat dan poin teknis wajib.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Buatkan draf pengumuman untuk forum Announcement myITS Classroom MK
@@ -348,9 +332,9 @@ nada profesional tapi ramah, sertakan poin teknis yang wajib ada.
 Maksimal 100 kata. Hasilkan HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -366,20 +350,18 @@ Maksimal 100 kata. Hasilkan HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![7. Pengumuman](screenshot-preview/07-pengumuman.png)
 
 ---
-
-
 ### 8. Jadwal & Linimasa Perkuliahan
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
 Tabel linimasa per minggu: tenggat tugas, ujian, dan bobot penilaiannya.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Berdasarkan RPS 16 minggu MK Pemrograman Web [lampirkan RPS], susun
@@ -388,9 +370,9 @@ beserta bobotnya, untuk ditempel di section pengantar myITS Classroom.
 Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -408,7 +390,7 @@ Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![8. Jadwal & Linimasa Perkuliahan](screenshot-preview/08-linimasa.png)
 
@@ -416,25 +398,24 @@ Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
 
 ## B. Aktivitas Pembelajaran
 
-
 ### 9. Forum Diskusi
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
-Pertanyaan pemantik utama + 2 sub-pertanyaan pendukung yang mendorong argumen — bukan sekedar definisi.
+Pertanyaan pemantik utama + 2 sub-pertanyaan pendukung yang mendorong argumen mahasiswa.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Buatkan 1 topik forum diskusi untuk materi "JavaScript dan DOM" (minggu
-5–6), berupa 1 pertanyaan pemantik utama + 2 sub-pertanyaan pendukung
+5-6), berupa 1 pertanyaan pemantik utama + 2 sub-pertanyaan pendukung
 yang mendorong mahasiswa berargumen, bukan sekadar menjawab definisi.
 Hasilkan HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -449,20 +430,18 @@ Hasilkan HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![9. Forum Diskusi](screenshot-preview/09-forum.png)
 
 ---
-
-
 ### 10. Penugasan (Assignment)
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
 Instruksi lengkap tugas: deskripsi, format pengumpulan, tenggat, dan acuan rubrik penilaian.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Buatkan instruksi lengkap Tugas 1 MK Pemrograman Web (topik: halaman web
@@ -471,9 +450,9 @@ format pengumpulan, dan tenggat. Gunakan rubrik penilaian sebagai acuan.
 Hasilkan HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -491,33 +470,31 @@ Hasilkan HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![10. Penugasan (Assignment)](screenshot-preview/10-assignment.png)
 
 ---
-
-
 ### 11. Kuis / Evaluasi Formatif
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
-Berbagai jenis soal evaluasi formatif di myITS Classroom — semua tersedia dalam **Moodle XML siap import**.
+Berbagai jenis soal evaluasi formatif yang dapat diimport langsung ke bank soal Moodle dalam format Moodle XML.
 
-| Jenis Soal | File XML |
-|-----------|---------|
-| Pilihan Ganda (radio) | [`moodle-quiz-xml/01-pilihan-ganda.xml`](moodle-quiz-xml/01-pilihan-ganda.xml) |
-| Checkbox / Multi-Jawaban | [`moodle-quiz-xml/02-checkbox-multi-jawaban.xml`](moodle-quiz-xml/02-checkbox-multi-jawaban.xml) |
-| Mencocokkan (Matching) | [`moodle-quiz-xml/03-mencocokkan.xml`](moodle-quiz-xml/03-mencocokkan.xml) |
-| Benar / Salah (True/False) | [`moodle-quiz-xml/04-benar-salah.xml`](moodle-quiz-xml/04-benar-salah.xml) |
-| Isian Singkat (Short Answer) | [`moodle-quiz-xml/05-isian-singkat.xml`](moodle-quiz-xml/05-isian-singkat.xml) |
-| Esai + rubrik + template | [`moodle-quiz-xml/06-esai.xml`](moodle-quiz-xml/06-esai.xml) |
-| Drag & Drop ke Teks | [`moodle-quiz-xml/07-drag-drop-teks.xml`](moodle-quiz-xml/07-drag-drop-teks.xml) |
-| **Semua Jenis (21 soal)** | [`moodle-quiz-xml/00-bank-soal-lengkap.xml`](moodle-quiz-xml/00-bank-soal-lengkap.xml) |
+**Cara Import:** Moodle Admin → Bank Soal → Import → Format: Moodle XML → Upload file → Import
 
-> **Cara Import:** Moodle → Admin → Bank Soal → Import → Format: **Moodle XML** → Upload → Import
+| Jenis Soal | Jumlah Soal | File XML |
+|-----------|-------------|---------|
+| Bank Soal Lengkap (semua jenis) | 21 soal | [00-bank-soal-lengkap.xml](moodle-quiz-xml/00-bank-soal-lengkap.xml) |
+| Pilihan Ganda (radio button, single answer) | 3 soal | [01-pilihan-ganda.xml](moodle-quiz-xml/01-pilihan-ganda.xml) |
+| Checkbox / Multi-Jawaban (partial credit) | 2 soal | [02-checkbox-multi-jawaban.xml](moodle-quiz-xml/02-checkbox-multi-jawaban.xml) |
+| Mencocokkan (Matching) | 3 soal | [03-mencocokkan.xml](moodle-quiz-xml/03-mencocokkan.xml) |
+| Benar / Salah (True/False) | 5 soal | [04-benar-salah.xml](moodle-quiz-xml/04-benar-salah.xml) |
+| Isian Singkat (Short Answer) | 4 soal | [05-isian-singkat.xml](moodle-quiz-xml/05-isian-singkat.xml) |
+| Esai (dengan rubrik dan template jawaban) | 2 soal | [06-esai.xml](moodle-quiz-xml/06-esai.xml) |
+| Drag & Drop ke Teks | 2 soal | [07-drag-drop-teks.xml](moodle-quiz-xml/07-drag-drop-teks.xml) |
 
-#### Prompt AI — Pilihan Ganda (Single Answer)
+**Prompt AI — Pilihan Ganda (Single Answer)**
 
 ```
 Buatkan [N] soal pilihan ganda (single answer) topik "[TOPIK]" untuk
@@ -527,62 +504,65 @@ Setiap soal: 1 jawaban benar (fraction="100") dan 3 pengecoh masuk akal
 Output Moodle XML (<quiz>...</quiz>), encoding UTF-8.
 ```
 
-#### Prompt AI — Checkbox / Multi-Jawaban
+**Prompt AI — Checkbox / Multi-Jawaban**
 
 ```
-Buatkan [N] soal checkbox (multi-jawaban, >1 jawaban benar) topik
-"[TOPIK]" untuk MK Pemrograman Web. Setiap soal: 2–3 jawaban benar
-dengan partial credit (fraction total = 100), 2 pengecoh (fraction
-negatif). Gunakan <single>false</single>. Output Moodle XML.
+Buatkan [N] soal checkbox (multi-jawaban, lebih dari 1 jawaban benar)
+topik "[TOPIK]" untuk MK Pemrograman Web. Setiap soal: 2-3 jawaban
+benar dengan partial credit (fraction total = 100), 2 pengecoh dengan
+fraction negatif. Gunakan <single>false</single>. Output Moodle XML.
 ```
 
-#### Prompt AI — Mencocokkan (Matching)
+**Prompt AI — Mencocokkan (Matching)**
 
 ```
 Buatkan [N] soal mencocokkan (matching) topik "[TOPIK]". Setiap soal:
-4–5 pasangan konsep↔definisi. Format: tiap pasangan dalam <subquestion>
-berisi <text> (kiri) dan <answer><text> (kanan).
+4-5 pasangan konsep dan definisi. Tiap pasangan dalam tag <subquestion>:
+<text> untuk item kiri dan <answer><text> untuk pasangannya.
 Output Moodle XML dengan <question type="matching">.
 ```
 
-#### Prompt AI — Benar / Salah (True/False)
+**Prompt AI — Benar / Salah (True/False)**
 
 ```
 Buatkan [N] pernyataan Benar/Salah topik "[TOPIK]". Campurkan yang
-benar dan salah. Sertakan penjelasan di <generalfeedback> mengapa
-pernyataan itu benar/salah. Output Moodle XML dengan
-<question type="truefalse">.
+benar dan yang salah. Sertakan penjelasan di <generalfeedback> mengapa
+pernyataan itu benar atau salah.
+Output Moodle XML dengan <question type="truefalse">.
 ```
 
-#### Prompt AI — Isian Singkat (Short Answer)
+**Prompt AI — Isian Singkat (Short Answer)**
 
 ```
-Buatkan [N] soal isian singkat topik "[TOPIK]". Jawaban berupa 1
-kata/frase pendek yang spesifik. Sertakan variasi penulisan yang
+Buatkan [N] soal isian singkat topik "[TOPIK]". Jawaban berupa 1 kata
+atau frasa pendek yang spesifik. Sertakan variasi penulisan yang
 diterima. Gunakan <usecase>0</usecase> (case-insensitive).
 Output Moodle XML dengan <question type="shortanswer">.
 ```
 
-#### Prompt AI — Esai (Essay)
+**Prompt AI — Esai (Essay)**
 
 ```
-Buatkan [N] soal esai topik "[TOPIK]" yang mengukur analisis/evaluasi.
-Sertakan: <responsetemplate> (kerangka jawaban untuk mahasiswa) dan
-<graderinfo> (rubrik penilaian untuk dosen). Gunakan
-<responsefieldlines>15</responsefieldlines>.
+Buatkan [N] soal esai topik "[TOPIK]" yang mengukur kemampuan
+analisis atau evaluasi (bukan sekadar definisi). Sertakan:
+- <responsetemplate>: kerangka jawaban untuk mahasiswa
+- <graderinfo>: rubrik penilaian untuk dosen
+- <responsefieldlines>15</responsefieldlines>
 Output Moodle XML dengan <question type="essay">.
 ```
 
-#### Prompt AI — Drag & Drop ke Teks (ddwtos)
+**Prompt AI — Drag & Drop ke Teks (ddwtos)**
 
 ```
 Buatkan [N] soal drag-and-drop ke teks topik "[TOPIK]". Soal berupa
-kode/paragraf dengan kata kunci dihapus dan diganti [[1]], [[2]], dst.
-Sediakan pilihan kata tepat + pengecoh. Output Moodle XML dengan
-<question type="ddwtos">.
+kode atau paragraf dengan kata kunci dihapus dan diganti [[1]], [[2]],
+dst. Sediakan pilihan kata yang tepat dan beberapa pengecoh.
+Output Moodle XML dengan <question type="ddwtos">.
 ```
 
-**📋 Contoh Hasil — HTML Tampilan Kuis di Moodle:**
+**Contoh Tampilan Kuis di Moodle**
+
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -602,20 +582,18 @@ Sediakan pilihan kata tepat + pengecoh. Output Moodle XML dengan
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
-![Preview Kuis / Evaluasi Formatif](screenshot-preview/11-kuis.png)
+![11. Kuis / Evaluasi Formatif](screenshot-preview/11-kuis.png)
 
 ---
-
-
 ### 12. Presensi Daring
 
-> **Status:** 🔵 Anjuran
+**Status:** Anjuran
 
-Kebijakan presensi via modul Attendance Moodle: cara, batas waktu, konsekuensi ketidakhadiran.
+Kebijakan presensi via modul Attendance Moodle: cara, batas waktu dibuka, konsekuensi ketidakhadiran.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Buatkan draf kebijakan singkat presensi daring untuk dicantumkan di
@@ -624,9 +602,9 @@ dibuka per sesi kuliah/praktikum, konsekuensi jika tidak presensi.
 Hasilkan HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -641,31 +619,29 @@ Hasilkan HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![12. Presensi Daring](screenshot-preview/12-presensi.png)
 
 ---
-
-
 ### 13. ETS & EAS
 
-> **Status:** 🟢 Wajib
+**Status:** Wajib
 
 Kisi-kisi ETS/EAS dalam tabel (minggu, materi, bentuk soal) dan contoh soal pemahaman + penerapan.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
-Berdasarkan CPMK-1 dan CPMK-2 (materi minggu 1–7) MK Pemrograman Web,
+Berdasarkan CPMK-1 dan CPMK-2 (materi minggu 1-7) MK Pemrograman Web,
 buatkan kisi-kisi ETS (tabel: minggu, materi, bentuk soal) dan 2 contoh
 soal yang mengukur pemahaman konsep + penerapan praktik.
 Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -686,20 +662,18 @@ Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![13. ETS & EAS](screenshot-preview/13-uts-uas.png)
 
 ---
-
-
 ### 14. Sesi Sinkron (Live Session)
 
-> **Status:** 🔵 Anjuran
+**Status:** Anjuran
 
 Agenda sesi sinkron BigBlueButton/Zoom 90 menit dengan pembagian waktu yang jelas.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Buatkan agenda sesi sinkron (BigBlueButton/Zoom) 90 menit untuk topik
@@ -708,9 +682,9 @@ sesi tanya-jawab. Hasilkan dalam format tabel HTML inline-style siap
 tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -727,31 +701,29 @@ tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![14. Sesi Sinkron (Live Session)](screenshot-preview/14-live-session.png)
 
 ---
-
-
 ### 15. Survei / Umpan Balik
 
-> **Status:** 🔵 Anjuran
+**Status:** Anjuran
 
-Survei akhir semester: 3 pernyataan Likert 1–5 dan 2 pertanyaan terbuka untuk evaluasi pembelajaran.
+Survei akhir semester: 3 pernyataan skala Likert 1-5 dan 2 pertanyaan terbuka untuk evaluasi pembelajaran.
 
-**💡 Prompt AI:**
+**Prompt AI**
 
 ```
 Buatkan survei umpan balik pembelajaran menjelang akhir semester untuk MK
-Pemrograman Web: 3 pertanyaan skala Likert 1–5 dan 2 pertanyaan terbuka,
+Pemrograman Web: 3 pertanyaan skala Likert 1-5 dan 2 pertanyaan terbuka,
 fokus pada kejelasan materi, kecukupan praktikum, dan saran perbaikan.
 Hasilkan HTML inline-style siap tempel Moodle.
 ```
 
-**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+**Contoh Hasil — HTML Siap Tempel ke Moodle**
 
-> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+Salin kode di bawah, lalu di Moodle klik ikon `</>` Edit HTML source, tempel, dan klik Update.
 
 ```html
 <div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
@@ -771,63 +743,70 @@ Hasilkan HTML inline-style siap tempel Moodle.
 </div>
 ```
 
-**🖼️ Preview tampilan di myITS Classroom:**
+**Preview Tampilan di myITS Classroom**
 
 ![15. Survei / Umpan Balik](screenshot-preview/15-survei.png)
 
 ---
+## Tips Prompting Efektif
 
+### 1. Selalu lampirkan RPS sebagai konteks
 
-## 💡 Tips Prompting Efektif
+AI tidak tahu detail mata kuliah Anda. Tanpa RPS, hasilnya generik dan sering tidak akurat.
 
-### 1. 📎 Selalu lampirkan RPS sebagai konteks
-
-AI tidak tahu detail mata kuliah Anda — tanpa RPS, hasilnya generik dan sering tidak akurat.
-
-```
-# Pembuka percakapan yang direkomendasikan:
-"Berikut RPS MK Pemrograman Web saya: [paste isi RPS atau upload file PDF/DOCX].
-Gunakan ini sebagai konteks untuk semua pertanyaan saya berikutnya."
-```
-
-### 2. 📐 Minta format output yang spesifik
+Rekomendasi pembuka percakapan:
 
 ```
-# Untuk Moodle (HTML):
-"Output dalam format HTML dengan inline style, siap ditempel ke Edit HTML source Moodle.
-Jangan gunakan class CSS eksternal."
+Berikut RPS MK Pemrograman Web saya: [paste isi RPS atau upload file PDF/DOCX].
+Gunakan ini sebagai konteks untuk semua pertanyaan saya berikutnya.
+```
+
+### 2. Minta format output yang spesifik
+
+Tentukan format output sejak awal agar tidak perlu diformat ulang sebelum ditempel ke Moodle.
+
+```
+# Untuk ditempel ke Moodle (HTML):
+Output dalam format HTML dengan inline style, siap ditempel ke Edit HTML source Moodle.
+Jangan gunakan class CSS eksternal atau variabel CSS.
 
 # Untuk kuis (XML):
-"Output dalam format Moodle XML (<quiz>...</quiz>), encoding UTF-8,
-siap di-import via Admin > Bank Soal > Import > Format Moodle XML."
+Output dalam format Moodle XML (<quiz>...</quiz>), encoding UTF-8,
+siap di-import via Admin > Bank Soal > Import > Format Moodle XML.
 ```
 
-### 3. 🔍 Untuk referensi — minta kata kunci, bukan judul jadi
+### 3. Untuk referensi: minta kata kunci, bukan judul jadi
+
+AI sering mengarang judul buku, nama penulis, atau URL yang tidak ada. Hindari meminta tautan spesifik.
 
 ```
-# ❌ Hindari:  "Berikan 5 referensi lengkap dengan URL."
-# ✅ Lakukan:  "Beri kata kunci pencarian per kategori untuk saya verifikasi sendiri."
+# Hindari:
+"Berikan 5 referensi lengkap dengan judul, penulis, dan URL."
+
+# Lakukan ini:
+"Berikan 3 kategori referensi beserta kata kunci pencarian yang bisa saya
+gunakan untuk mencari dan memverifikasi sumber aslinya. Jangan mengarang
+judul/penulis/URL."
 ```
 
-### 4. 🧩 Iterasi per bagian kecil, bukan sekaligus
+### 4. Iterasi per bagian kecil, bukan sekaligus
 
-Meminta AI mengisi 16 minggu sekaligus menurunkan kualitas. Buat per pertemuan/topik, review, baru lanjut.
+Meminta AI mengisi seluruh RPS atau 16 minggu sekaligus menghasilkan kualitas yang turun dan error yang sulit ditemukan. Buat per pertemuan atau per komponen, review terlebih dahulu, baru lanjut ke bagian berikutnya.
 
-### 5. ✅ Verifikasi angka bobot penilaian
+### 5. Verifikasi angka bobot penilaian
 
-AI sering membuat kesalahan penjumlahan. Setelah dapat komponen evaluasi, cek: **total bobot = 100%?**
+AI sering membuat kesalahan penjumlahan saat mengisi bobot evaluasi. Setelah AI menghasilkan komponen evaluasi, pastikan total bobot sama dengan 100%.
 
 ---
 
 | Masalah | Solusi |
 |---------|--------|
-| Output terlalu generik | Tambahkan lebih banyak konteks RPS di prompt |
-| Bobot evaluasi salah | Sebutkan angka persis: "Tugas 30%, ETS 20%, Tugas 2 25%, EAS 25%" |
+| Output terlalu generik | Tambahkan lebih banyak konteks dari RPS di prompt |
+| Bobot evaluasi salah | Sebutkan angka persis di prompt, contoh: Tugas 30%, ETS 20%, Tugas 2 25%, EAS 25% |
 | HTML tidak muncul di Moodle | Pastikan paste via ikon `</>` Edit HTML source, bukan kotak teks biasa |
-| Referensi terlihat karangan | Minta kata kunci pencarian, bukan judul/URL langsung |
-| Soal XML gagal import | Cek encoding UTF-8 dan karakter khusus yang perlu di-escape |
-
+| Referensi terlihat karangan | Gunakan prompt tipe 3: kata kunci pencarian, bukan judul jadi |
+| Soal XML gagal diimport | Cek encoding UTF-8 dan pastikan karakter khusus sudah di-escape |
 
 ---
 
-🟢 Wajib · 🔵 Anjuran · 🟡 Kondisional — sesuai *Standar Baku Mutu Konten & Aktivitas Pembelajaran myITS Classroom (2026)*
+Standar Baku Mutu Konten dan Aktivitas Pembelajaran myITS Classroom 2026
