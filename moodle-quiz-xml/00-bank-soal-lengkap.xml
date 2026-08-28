@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  BANK SOAL LENGKAP — Semua Jenis Soal Moodle
+  MK: Pemrograman Web (ET234305) — Departemen Teknologi Informasi, ITS
+  Berisi: Pilihan Ganda, Checkbox, Mencocokkan, Benar/Salah,
+          Isian Singkat, Esai, Drag & Drop ke Teks
+  Import: Admin > Bank Soal > Import > Format: Moodle XML
+-->
+<quiz>
+
+  <question type="multichoice">
+      <name>
+        <text>HTML Semantik — Tag yang tepat untuk konten utama halaman</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Tag HTML5 yang <strong>paling tepat</strong> untuk membungkus
+          konten utama (unik) sebuah halaman web adalah...</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Dalam HTML5, <code>&lt;main&gt;</code> digunakan untuk konten
+          utama yang unik per halaman. Lihat referensi MDN: HTML &lt;main&gt; element.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <single>true</single>
+      <shuffleanswers>true</shuffleanswers>
+      <answernumbering>abc</answernumbering>
+  
+      <answer fraction="100" format="html">
+        <text><![CDATA[<code>&lt;main&gt;</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! <code>&lt;main&gt;</code> adalah elemen semantik untuk konten utama halaman.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0" format="html">
+        <text><![CDATA[<code>&lt;section&gt;</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ <code>&lt;section&gt;</code> digunakan untuk pengelompokan konten bertema, bukan konten utama tunggal.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0" format="html">
+        <text><![CDATA[<code>&lt;div&gt;</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ <code>&lt;div&gt;</code> adalah elemen non-semantik (generik), tidak memiliki makna struktural.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0" format="html">
+        <text><![CDATA[<code>&lt;article&gt;</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ <code>&lt;article&gt;</code> digunakan untuk konten mandiri yang bisa berdiri sendiri (mis. posting blog), bukan konten utama keseluruhan.</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="multichoice">
+      <name>
+        <text>CSS Box Model — Properti jarak dalam elemen</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Perhatikan kode CSS berikut:</p>
+          <pre style="background:#f4f4f4;padding:8px;border-radius:4px;">
+  .kotak {
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #333;
+    width: 200px;
+  }</pre>
+          <p>Berapa <strong>total lebar</strong> elemen <code>.kotak</code>
+          yang dirender browser secara default (box-sizing: content-box)?</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Dengan <code>box-sizing: content-box</code>: total lebar =
+          width + padding kiri + padding kanan + border kiri + border kanan
+          = 200 + 20 + 20 + 2 + 2 = <strong>244px</strong>. Margin tidak termasuk lebar elemen.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <single>true</single>
+      <shuffleanswers>true</shuffleanswers>
+      <answernumbering>abc</answernumbering>
+  
+      <answer fraction="100" format="html">
+        <text>244px</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! 200 (width) + 40 (padding kiri+kanan) + 4 (border kiri+kanan) = 244px.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0" format="html">
+        <text>200px</text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ 200px hanya nilai <code>width</code>-nya saja — belum termasuk padding dan border.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0" format="html">
+        <text>264px</text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ 264px menghitung margin (yang tidak termasuk dalam lebar elemen).</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0" format="html">
+        <text>240px</text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ 240px lupa menghitung border (2px × 2 sisi = 4px).</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="multichoice">
+      <name>
+        <text>JavaScript DOM — Memilih elemen dengan ID</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Manakah cara yang <strong>paling tepat</strong> untuk memilih
+          elemen dengan <code>id="tombol-kirim"</code> menggunakan JavaScript modern?</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p><code>document.getElementById()</code> dan
+          <code>document.querySelector('#id')</code> keduanya valid, namun
+          <code>querySelector</code> lebih fleksibel karena menerima selector CSS apapun.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <single>true</single>
+      <shuffleanswers>true</shuffleanswers>
+      <answernumbering>abc</answernumbering>
+  
+      <answer fraction="100" format="html">
+        <text><![CDATA[<code>document.querySelector('#tombol-kirim')</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! <code>querySelector</code> menggunakan selector CSS — <code>#</code> berarti ID.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0" format="html">
+        <text><![CDATA[<code>document.getElement('tombol-kirim')</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ Method <code>getElement()</code> tidak ada di JavaScript.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0" format="html">
+        <text><![CDATA[<code>document.querySelector('.tombol-kirim')</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ <code>.</code> adalah selector <em>class</em>, bukan ID. Untuk ID gunakan <code>#</code>.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0" format="html">
+        <text><![CDATA[<code>document.selectById('tombol-kirim')</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ Method <code>selectById()</code> tidak ada. Yang benar adalah <code>getElementById()</code>.</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="multichoice">
+      <name>
+        <text>HTML Semantik — Tag-tag yang termasuk elemen semantik HTML5</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Pilih <strong>semua</strong> tag yang termasuk elemen
+          <em>semantik</em> HTML5 (bisa lebih dari satu):</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Elemen semantik HTML5 memberi makna pada struktur dokumen:
+          <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+          <code>&lt;footer&gt;</code>, <code>&lt;main&gt;</code>,
+          <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, dll.
+          <code>&lt;div&gt;</code> dan <code>&lt;span&gt;</code> adalah elemen
+          generik/non-semantik.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <single>false</single>
+      <shuffleanswers>true</shuffleanswers>
+      <answernumbering>abc</answernumbering>
+  
+      <!-- Jawaban benar (3 opsi, fraction = 100/3 ≈ 33.33% each) -->
+      <answer fraction="33.33333" format="html">
+        <text><![CDATA[<code>&lt;header&gt;</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! <code>&lt;header&gt;</code> adalah elemen semantik HTML5.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="33.33333" format="html">
+        <text><![CDATA[<code>&lt;nav&gt;</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! <code>&lt;nav&gt;</code> mendefinisikan navigasi utama.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="33.33333" format="html">
+        <text><![CDATA[<code>&lt;footer&gt;</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! <code>&lt;footer&gt;</code> mendefinisikan bagian bawah halaman/section.</p>]]></text>
+        </feedback>
+      </answer>
+  
+      <!-- Pengecoh (fraction negatif) -->
+      <answer fraction="-33.33333" format="html">
+        <text><![CDATA[<code>&lt;div&gt;</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ <code>&lt;div&gt;</code> adalah elemen generik (non-semantik).</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="-33.33333" format="html">
+        <text><![CDATA[<code>&lt;span&gt;</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ <code>&lt;span&gt;</code> adalah elemen inline generik (non-semantik).</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="multichoice">
+      <name>
+        <text>CSS Flexbox — Properti yang berlaku pada flex container</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Manakah properti CSS yang berlaku pada
+          <strong>flex container</strong> (elemen yang memiliki
+          <code>display: flex</code>)? Pilih semua yang benar.</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Properti <em>flex container</em>: <code>justify-content</code>,
+          <code>align-items</code>, <code>flex-direction</code>,
+          <code>flex-wrap</code>, <code>gap</code>, dll.
+          Sedangkan <code>flex-grow</code> dan <code>align-self</code>
+          adalah properti <em>flex item</em> (elemen di dalam container).</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <single>false</single>
+      <shuffleanswers>true</shuffleanswers>
+      <answernumbering>abc</answernumbering>
+  
+      <answer fraction="33.33333" format="html">
+        <text><![CDATA[<code>justify-content</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! Mengatur distribusi item pada sumbu utama (main axis).</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="33.33333" format="html">
+        <text><![CDATA[<code>align-items</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! Mengatur penyelarasan item pada sumbu silang (cross axis).</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="33.33333" format="html">
+        <text><![CDATA[<code>flex-direction</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! Menentukan arah sumbu utama (row/column).</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="-33.33333" format="html">
+        <text><![CDATA[<code>flex-grow</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ <code>flex-grow</code> adalah properti flex <em>item</em>, bukan container.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="-33.33333" format="html">
+        <text><![CDATA[<code>align-self</code>]]></text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ <code>align-self</code> adalah properti flex <em>item</em> untuk mengoverride <code>align-items</code> individual.</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="matching">.
+    ────────────────────────────────────────────────────────────────────
+  -->
+  <quiz>
+  
+    <!-- ═══════════════════════════════════════════
+         SOAL 1 — Cocokkan tag HTML dengan fungsinya
+         ═══════════════════════════════════════════ -->
+    <question type="matching">
+      <name>
+        <text>HTML — Cocokkan tag dengan fungsinya</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Cocokkan setiap <strong>tag HTML</strong> dengan
+          <strong>fungsi utamanya</strong>:</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Pelajari fungsi elemen semantik HTML5 di MDN Web Docs:
+          <em>HTML elements reference</em>.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <shuffleanswers>true</shuffleanswers>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>&lt;a href="..."&gt;</code>]]></text>
+        <answer format="html">
+          <text>Membuat tautan/hyperlink ke URL lain</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>&lt;img src="..." alt="..."&gt;</code>]]></text>
+        <answer format="html">
+          <text>Menampilkan gambar dengan teks alternatif</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>&lt;form action="..." method="..."&gt;</code>]]></text>
+        <answer format="html">
+          <text>Membuat formulir untuk mengirim data ke server</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>&lt;table&gt;</code>]]></text>
+        <answer format="html">
+          <text>Menampilkan data dalam format baris dan kolom</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>&lt;input type="submit"&gt;</code>]]></text>
+        <answer format="html">
+          <text>Tombol untuk mengirimkan formulir</text>
+        </answer>
+      </subquestion>
+    </question>
+
+  <question type="matching">
+      <name>
+        <text>CSS — Cocokkan properti dengan efek yang dihasilkan</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Cocokkan setiap <strong>properti CSS</strong> dengan
+          <strong>efek yang dihasilkan</strong>:</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Pahami perbedaan <code>margin</code> vs <code>padding</code>,
+          serta fungsi tiap properti layout di MDN CSS reference.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <shuffleanswers>true</shuffleanswers>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>margin: auto</code>]]></text>
+        <answer format="html">
+          <text>Memusatkan elemen secara horizontal dalam container</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>position: fixed</code>]]></text>
+        <answer format="html">
+          <text>Elemen tetap di posisi layar saat halaman di-scroll</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>overflow: hidden</code>]]></text>
+        <answer format="html">
+          <text>Konten yang melebihi ukuran elemen dipotong/disembunyikan</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>z-index: 10</code>]]></text>
+        <answer format="html">
+          <text>Mengatur urutan tumpukan elemen yang saling overlap</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><![CDATA[<code>transition: all 0.3s ease</code>]]></text>
+        <answer format="html">
+          <text>Menambahkan animasi halus saat properti CSS berubah</text>
+        </answer>
+      </subquestion>
+    </question>
+
+  <question type="matching">
+      <name>
+        <text>HTTP Method — Cocokkan dengan operasi CRUD</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Cocokkan setiap <strong>HTTP Method</strong> dengan
+          <strong>operasi CRUD</strong> yang sesuai:</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Konvensi REST API: GET=Read, POST=Create, PUT/PATCH=Update, DELETE=Delete.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <shuffleanswers>true</shuffleanswers>
+  
+      <subquestion format="html">
+        <text><strong>GET</strong></text>
+        <answer format="html">
+          <text>Read — Mengambil/membaca data dari server</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><strong>POST</strong></text>
+        <answer format="html">
+          <text>Create — Mengirim data baru ke server</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><strong>PUT</strong></text>
+        <answer format="html">
+          <text>Update — Memperbarui/mengganti keseluruhan data</text>
+        </answer>
+      </subquestion>
+  
+      <subquestion format="html">
+        <text><strong>DELETE</strong></text>
+        <answer format="html">
+          <text>Delete — Menghapus data dari server</text>
+        </answer>
+      </subquestion>
+    </question>
+
+  <question type="truefalse">.
+    ────────────────────────────────────────────────────────────────────
+  -->
+  <quiz>
+  
+    <!-- Pernyataan 1 — BENAR -->
+    <question type="truefalse">
+      <name>
+        <text>B/S — CSS: display flex mengubah elemen menjadi flex container</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Menambahkan properti <code>display: flex</code> pada sebuah
+          elemen akan menjadikan elemen tersebut sebagai
+          <em>flex container</em> dan anak-anaknya menjadi
+          <em>flex item</em>.</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Pernyataan ini <strong>BENAR</strong>. <code>display: flex</code>
+          mengaktifkan Flexbox Layout pada elemen tersebut — elemen itu
+          menjadi container, dan semua anak langsungnya menjadi item
+          yang dapat diatur dengan properti flex.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>1</penalty>
+      <hidden>0</hidden>
+  
+      <!-- Jawaban benar: true -->
+      <answer fraction="100">
+        <text>true</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! Itulah cara kerja Flexbox.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0">
+        <text>false</text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ Pernyataan ini sebenarnya BENAR — <code>display: flex</code> memang menjadikan elemen sebagai flex container.</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="truefalse">
+      <name>
+        <text>B/S — JavaScript: let dan var memiliki scope yang sama</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Variabel yang dideklarasikan dengan <code>let</code> dan
+          <code>var</code> memiliki <em>scope</em> (cakupan) yang
+          persis sama di JavaScript.</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Pernyataan ini <strong>SALAH</strong>.<br>
+          • <code>var</code> memiliki <em>function scope</em> (atau global scope)
+          dan mengalami <em>hoisting</em>.<br>
+          • <code>let</code> memiliki <em>block scope</em> — hanya berlaku
+          di dalam blok <code>{}</code> tempat ia dideklarasikan, dan tidak
+          di-hoist dengan cara yang sama.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>1</penalty>
+      <hidden>0</hidden>
+  
+      <answer fraction="0">
+        <text>true</text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ Tidak tepat. <code>let</code> = block scope, <code>var</code> = function scope. Keduanya berbeda.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="100">
+        <text>false</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar bahwa pernyataan itu SALAH! <code>let</code> dan <code>var</code> memiliki scope yang berbeda.</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="truefalse">
+      <name>
+        <text>B/S — HTTP: GET request tidak boleh mengubah data di server</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Berdasarkan standar HTTP, method <code>GET</code> seharusnya
+          bersifat <em>safe</em> dan <em>idempotent</em> — artinya tidak
+          boleh mengubah data di server.</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Pernyataan ini <strong>BENAR</strong>. RFC 7231 menyatakan GET
+          adalah <em>safe method</em> — seharusnya hanya membaca data, bukan
+          memodifikasinya. Operasi yang mengubah data seharusnya menggunakan
+          POST, PUT, PATCH, atau DELETE.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>1</penalty>
+      <hidden>0</hidden>
+  
+      <answer fraction="100">
+        <text>true</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! GET adalah safe method — hanya untuk membaca data.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0">
+        <text>false</text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ Pernyataan itu sebenarnya BENAR. GET memang seharusnya tidak mengubah data.</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="truefalse">
+      <name>
+        <text>B/S — CSS: padding masuk dalam perhitungan width secara default</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Secara default (tanpa mengatur <code>box-sizing</code>),
+          nilai <code>padding</code> sudah termasuk dalam nilai
+          <code>width</code> yang ditentukan di CSS.</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Pernyataan ini <strong>SALAH</strong>. Secara default,
+          <code>box-sizing: content-box</code> — artinya <code>width</code>
+          hanya mengatur lebar <em>konten</em>, dan padding/border
+          <strong>ditambahkan di luar</strong> nilai width tersebut.
+          Gunakan <code>box-sizing: border-box</code> agar padding
+          masuk dalam width.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>1</penalty>
+      <hidden>0</hidden>
+  
+      <answer fraction="0">
+        <text>true</text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ Salah. Default <code>box-sizing: content-box</code> — padding ditambah di luar width.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="100">
+        <text>false</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar bahwa pernyataan itu SALAH! Secara default padding ditambahkan di luar width (content-box).</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="truefalse">
+      <name>
+        <text>B/S — Vue.js: v-model adalah two-way data binding</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Direktif <code>v-model</code> di Vue.js mengimplementasikan
+          <em>two-way data binding</em> — perubahan di input form
+          otomatis memperbarui data, dan perubahan data otomatis
+          memperbarui tampilan input.</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Pernyataan ini <strong>BENAR</strong>. <code>v-model</code>
+          adalah syntactic sugar untuk <code>:value</code> + <code>@input</code>
+          — data reaktif di komponen sinkron dua arah dengan elemen form.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>1</penalty>
+      <hidden>0</hidden>
+  
+      <answer fraction="100">
+        <text>true</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! <code>v-model</code> = two-way data binding di Vue.js.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="0">
+        <text>false</text>
+        <feedback format="html">
+          <text><![CDATA[<p>❌ Pernyataan itu sebenarnya BENAR. <code>v-model</code> memang two-way binding.</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="shortanswer">.
+    Gunakan <usecase>0</usecase> untuk case-insensitive.
+    ────────────────────────────────────────────────────────────────────
+  -->
+  <quiz>
+  
+    <!-- ═══════════════════════════════════════════
+         SOAL 1 — Properti CSS untuk warna teks
+         ═══════════════════════════════════════════ -->
+    <question type="shortanswer">
+      <name>
+        <text>CSS — Properti untuk mengubah warna teks</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Properti CSS apakah yang digunakan untuk mengubah
+          <strong>warna teks</strong> sebuah elemen?
+          (Tulis nama properti saja, tanpa nilai)</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Properti CSS untuk warna teks adalah <code>color</code>.
+          Contoh: <code>color: #333;</code> atau <code>color: red;</code></p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0</penalty>
+      <hidden>0</hidden>
+      <usecase>0</usecase><!-- 0 = case-insensitive -->
+  
+      <!-- Semua variasi jawaban yang diterima -->
+      <answer fraction="100">
+        <text>color</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! <code>color</code> adalah properti CSS untuk warna teks.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="100">
+        <text>color:</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar (dengan titik dua juga diterima).</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="shortanswer">
+      <name>
+        <text>Web — Singkatan HTTP</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Apa kepanjangan dari singkatan <strong>HTTP</strong>?</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>HTTP = <strong>HyperText Transfer Protocol</strong> —
+          protokol komunikasi yang digunakan browser untuk bertukar
+          data dengan web server.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0</penalty>
+      <hidden>0</hidden>
+      <usecase>0</usecase>
+  
+      <answer fraction="100">
+        <text>HyperText Transfer Protocol</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar!</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="100">
+        <text>Hypertext Transfer Protocol</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar!</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="shortanswer">
+      <name>
+        <text>JavaScript — Method bawaan untuk memilih elemen by ID</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Tuliskan nama <strong>method JavaScript bawaan (vanilla)</strong>
+          yang digunakan untuk memilih elemen HTML berdasarkan
+          atribut <code>id</code>-nya.
+          (Tulis nama method saja, tanpa <code>document.</code>)</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Jawaban: <code>getElementById</code><br>
+          Digunakan sebagai <code>document.getElementById('nama-id')</code></p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0</penalty>
+      <hidden>0</hidden>
+      <usecase>0</usecase>
+  
+      <answer fraction="100">
+        <text>getElementById</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar!</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="100">
+        <text>getElementById()</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar (dengan tanda kurung juga diterima).</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="50">
+        <text>querySelector</text>
+        <feedback format="html">
+          <text><![CDATA[<p>⚠️ Hampir benar! <code>querySelector</code> juga bisa digunakan, tapi jawaban yang lebih spesifik adalah <code>getElementById</code>.</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="shortanswer">
+      <name>
+        <text>HTML — Tag untuk heading paling penting di halaman</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Dalam HTML, tag heading mana yang memiliki tingkatan/hierarki
+          <strong>paling tinggi</strong> (paling penting secara semantik)?
+          Tulis tag-nya (contoh format: <code>&lt;h1&gt;</code>)</p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Jawaban: <code>&lt;h1&gt;</code> — Heading level 1 adalah
+          judul utama halaman, dan hanya boleh ada 1 per halaman untuk
+          praktik SEO yang baik.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0</penalty>
+      <hidden>0</hidden>
+      <usecase>0</usecase>
+  
+      <answer fraction="100">
+        <text>&lt;h1&gt;</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar! <code>&lt;h1&gt;</code> adalah heading tertinggi.</p>]]></text>
+        </feedback>
+      </answer>
+      <answer fraction="100">
+        <text>h1</text>
+        <feedback format="html">
+          <text><![CDATA[<p>✅ Benar (tanpa tag bracket juga diterima).</p>]]></text>
+        </feedback>
+      </answer>
+    </question>
+
+  <question type="essay">.
+    ────────────────────────────────────────────────────────────────────
+  -->
+  <quiz>
+  
+    <!-- ═══════════════════════════════════════════
+         SOAL 1 — Analisis: Vanilla JS vs Framework
+         ═══════════════════════════════════════════ -->
+    <question type="essay">
+      <name>
+        <text>Esai — Analisis: Kapan gunakan Vanilla JS vs Framework</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Dalam pengembangan aplikasi web modern, seorang developer
+          dihadapkan pada pilihan: menggunakan <strong>Vanilla JavaScript</strong>
+          atau <strong>framework front-end</strong> (seperti Vue.js, React, Angular).</p>
+  
+          <p><strong>Analisis dan jelaskan:</strong></p>
+          <ol>
+            <li>Faktor apa saja yang menentukan pilihan antara Vanilla JS dan framework?</li>
+            <li>Berikan <em>minimal 2 skenario proyek</em> di mana Vanilla JS lebih tepat,
+                dan 2 skenario di mana framework lebih tepat. Jelaskan alasannya.</li>
+            <li>Jelaskan trade-off utama (kelebihan dan kekurangan) dari masing-masing pendekatan.</li>
+          </ol>
+          <p><em>Panjang jawaban yang diharapkan: 300–500 kata.</em></p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Jawaban yang baik mencakup: kompleksitas proyek, ukuran tim,
+          kebutuhan reaktivitas data, performa, learning curve, dan maintainability.</p>
+        ]]></text>
+      </generalfeedback>
+  
+      <!-- Template kerangka jawaban yang muncul di kotak teks mahasiswa -->
+      <responsetemplate format="html">
+        <text><![CDATA[
+          <p><strong>1. Faktor penentu pilihan:</strong></p>
+          <p>[Isi di sini...]</p>
+  
+          <p><strong>2. Skenario yang tepat:</strong></p>
+          <p>Vanilla JS tepat untuk:
+          <br>• Skenario 1: ...
+          <br>• Skenario 2: ...</p>
+          <p>Framework tepat untuk:
+          <br>• Skenario 1: ...
+          <br>• Skenario 2: ...</p>
+  
+          <p><strong>3. Trade-off:</strong></p>
+          <p>[Isi di sini...]</p>
+        ]]></text>
+      </responsetemplate>
+  
+      <!-- Panduan penilaian untuk grader/dosen -->
+      <graderinfo format="html">
+        <text><![CDATA[
+          <h3>Rubrik Penilaian Esai (100 poin)</h3>
+          <table border="1" cellpadding="5" style="border-collapse:collapse;">
+            <tr><th>Kriteria</th><th>Bobot</th><th>Indikator</th></tr>
+            <tr><td>Kelengkapan faktor (poin 1)</td><td>25</td>
+                <td>Menyebut ≥3 faktor relevan dengan penjelasan</td></tr>
+            <tr><td>Ketepatan skenario (poin 2)</td><td>40</td>
+                <td>4 skenario tepat dengan alasan yang logis</td></tr>
+            <tr><td>Analisis trade-off (poin 3)</td><td>25</td>
+                <td>Trade-off seimbang, tidak bias ke satu sisi</td></tr>
+            <tr><td>Bahasa &amp; struktur</td><td>10</td>
+                <td>Rapi, terstruktur, mudah dipahami</td></tr>
+          </table>
+        ]]></text>
+      </graderinfo>
+  
+      <defaultgrade>10</defaultgrade>
+      <penalty>0</penalty>
+      <hidden>0</hidden>
+      <responseformat>editor</responseformat>
+      <responserequired>1</responserequired>
+      <responsefieldlines>15</responsefieldlines>
+      <attachments>0</attachments>
+      <attachmentsrequired>0</attachmentsrequired>
+    </question>
+
+  <question type="essay">
+      <name>
+        <text>Esai — Evaluasi rancangan API RESTful</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Perhatikan rancangan endpoint API berikut untuk aplikasi
+          manajemen mahasiswa:</p>
+          <pre style="background:#f4f4f4;padding:10px;border-radius:4px;font-size:13px;">
+  GET    /getMahasiswa
+  POST   /createMahasiswa
+  GET    /deleteMahasiswa?id=5
+  POST   /updateMahasiswa/3
+  GET    /mahasiswaList/search?nama=budi</pre>
+  
+          <p><strong>Evaluasi rancangan di atas dan jawab:</strong></p>
+          <ol>
+            <li>Identifikasi <em>minimal 3 masalah/pelanggaran</em> konvensi RESTful API dari endpoint di atas.</li>
+            <li>Tulis ulang semua endpoint tersebut mengikuti konvensi REST yang benar.</li>
+            <li>Jelaskan <em>mengapa</em> konvensi RESTful penting dalam pengembangan API.</li>
+          </ol>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Masalah utama: verb dalam URL (getMahasiswa, createMahasiswa),
+          penggunaan GET untuk operasi yang mengubah data (deleteMahasiswa),
+          tidak konsisten penggunaan method HTTP.
+          Versi RESTful: GET /mahasiswa, POST /mahasiswa, DELETE /mahasiswa/5,
+          PUT /mahasiswa/3, GET /mahasiswa?nama=budi</p>
+        ]]></text>
+      </generalfeedback>
+  
+      <responsetemplate format="html">
+        <text><![CDATA[
+          <p><strong>1. Masalah yang ditemukan:</strong></p>
+          <p>• Masalah 1: ...<br>• Masalah 2: ...<br>• Masalah 3: ...</p>
+  
+          <p><strong>2. Endpoint yang diperbaiki:</strong></p>
+          <pre>
+  [METHOD] /[resource]      → [penjelasan]
+  ...
+          </pre>
+  
+          <p><strong>3. Pentingnya konvensi RESTful:</strong></p>
+          <p>[Isi di sini...]</p>
+        ]]></text>
+      </responsetemplate>
+  
+      <graderinfo format="html">
+        <text><![CDATA[
+          <h3>Rubrik Penilaian (100 poin)</h3>
+          <table border="1" cellpadding="5" style="border-collapse:collapse;">
+            <tr><th>Kriteria</th><th>Bobot</th></tr>
+            <tr><td>Identifikasi masalah (≥3 valid)</td><td>30</td></tr>
+            <tr><td>Perbaikan endpoint (semua 5 endpoint benar)</td><td>40</td></tr>
+            <tr><td>Penjelasan pentingnya konvensi</td><td>20</td></tr>
+            <tr><td>Kejelasan &amp; struktur jawaban</td><td>10</td></tr>
+          </table>
+        ]]></text>
+      </graderinfo>
+  
+      <defaultgrade>10</defaultgrade>
+      <penalty>0</penalty>
+      <hidden>0</hidden>
+      <responseformat>editor</responseformat>
+      <responserequired>1</responserequired>
+      <responsefieldlines>15</responsefieldlines>
+      <attachments>0</attachments>
+      <attachmentsrequired>0</attachmentsrequired>
+    </question>
+
+  <question type="ddwtos">.
+    Setiap pilihan dalam <dragbox>: <no> = nomor, <text> = teks pilihan,
+    <infinite/> jika bisa dipakai lebih dari sekali.
+    ────────────────────────────────────────────────────────────────────
+  -->
+  <quiz>
+  
+    <!-- ═══════════════════════════════════════════
+         SOAL 1 — Lengkapi CSS Flexbox
+         ═══════════════════════════════════════════ -->
+    <question type="ddwtos">
+      <name>
+        <text>Drag &amp; Drop — Lengkapi kode CSS Flexbox</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Seret kata yang tepat untuk melengkapi kode CSS berikut agar
+          menghasilkan layout flex dengan item tersusun <strong>horizontal</strong>
+          dan <strong>rata tengah</strong> secara vertikal:</p>
+          <pre style="background:#1e1e2e;color:#cdd6f4;padding:14px;border-radius:6px;font-size:13px;line-height:1.9;">
+  .container {
+    display: [[1]];
+    flex-direction: [[2]];
+    align-items: [[3]];
+    justify-content: [[4]];
+    gap: 16px;
+  }</pre>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Kode lengkap: <code>display: flex;</code> mengaktifkan flexbox,
+          <code>flex-direction: row</code> = horizontal,
+          <code>align-items: center</code> = rata tengah di sumbu silang (vertikal),
+          <code>justify-content: space-between</code> = item tersebar merata.</p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <shuffleanswers>1</shuffleanswers>
+  
+      <!-- Jawaban yang benar untuk tiap celah [[n]] -->
+      <!-- [[1]] = flex, [[2]] = row, [[3]] = center, [[4]] = space-between -->
+  
+      <dragbox>
+        <no>1</no>
+        <text>flex</text>
+      </dragbox>
+      <dragbox>
+        <no>2</no>
+        <text>row</text>
+      </dragbox>
+      <dragbox>
+        <no>3</no>
+        <text>center</text>
+      </dragbox>
+      <dragbox>
+        <no>4</no>
+        <text>space-between</text>
+      </dragbox>
+  
+      <!-- Pengecoh -->
+      <dragbox>
+        <no>5</no>
+        <text>grid</text>
+      </dragbox>
+      <dragbox>
+        <no>6</no>
+        <text>column</text>
+      </dragbox>
+      <dragbox>
+        <no>7</no>
+        <text>flex-start</text>
+      </dragbox>
+      <dragbox>
+        <no>8</no>
+        <text>block</text>
+      </dragbox>
+    </question>
+
+  <question type="ddwtos">
+      <name>
+        <text>Drag &amp; Drop — Lengkapi konsep JavaScript async/await</text>
+      </name>
+      <questiontext format="html">
+        <text><![CDATA[
+          <p>Seret kata yang tepat untuk melengkapi penjelasan berikut:</p>
+          <p style="background:#f7f5ef;padding:14px;border-radius:6px;line-height:2.2;font-size:14px;">
+            Keyword <code>[[1]]</code> digunakan sebelum deklarasi fungsi untuk
+            menandai bahwa fungsi tersebut bersifat asinkron. Di dalam fungsi tersebut,
+            keyword <code>[[2]]</code> digunakan untuk menunggu hasil
+            <code>[[3]]</code> sebelum melanjutkan eksekusi kode berikutnya.
+            Jika terjadi error, kita tangkap dengan blok
+            <code>[[4]]</code>.
+          </p>
+        ]]></text>
+      </questiontext>
+      <generalfeedback format="html">
+        <text><![CDATA[
+          <p>Jawaban: <code>async</code> → <code>await</code> → <code>Promise</code> → <code>catch</code>.<br>
+          Pola lengkap: <code>async function fetchData() { try { const data = await fetch(url); } catch(err) { ... } }</code></p>
+        ]]></text>
+      </generalfeedback>
+      <defaultgrade>1</defaultgrade>
+      <penalty>0.3333333</penalty>
+      <hidden>0</hidden>
+      <shuffleanswers>1</shuffleanswers>
+  
+      <dragbox>
+        <no>1</no>
+        <text>async</text>
+      </dragbox>
+      <dragbox>
+        <no>2</no>
+        <text>await</text>
+      </dragbox>
+      <dragbox>
+        <no>3</no>
+        <text>Promise</text>
+      </dragbox>
+      <dragbox>
+        <no>4</no>
+        <text>catch</text>
+      </dragbox>
+  
+      <!-- Pengecoh -->
+      <dragbox>
+        <no>5</no>
+        <text>sync</text>
+      </dragbox>
+      <dragbox>
+        <no>6</no>
+        <text>defer</text>
+      </dragbox>
+      <dragbox>
+        <no>7</no>
+        <text>callback</text>
+      </dragbox>
+      <dragbox>
+        <no>8</no>
+        <text>finally</text>
+      </dragbox>
+    </question>
+
+</quiz>

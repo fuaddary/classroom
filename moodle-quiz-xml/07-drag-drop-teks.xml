@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TIPE: Drag & Drop ke Teks (Drag and Drop into Text / ddwtos)
+  Mahasiswa menyeret kata/frasa ke dalam celah kosong di dalam teks.
+  Format [[n]] menandai posisi celah, n = nomor urut pilihan.
+  Import ke Moodle: Admin > Bank Soal > Import > Format: Moodle XML
+
+  PROMPT AI untuk membuat soal ini:
+  ────────────────────────────────────────────────────────────────────
+  Buatkan 2 soal drag-and-drop ke teks (ddwtos) topik "[TOPIK]" untuk
+  MK Pemrograman Web. Soal berupa paragraf/kode dengan kata kunci
+  dihilangkan, diganti marker [[1]], [[2]], dst. Sediakan pilihan kata
+  yang cocok dan beberapa pengecoh.
+  Format Moodle XML dengan <question type="ddwtos">.
+  Setiap pilihan dalam <dragbox>: <no> = nomor, <text> = teks pilihan,
+  <infinite/> jika bisa dipakai lebih dari sekali.
+  ────────────────────────────────────────────────────────────────────
+-->
+<quiz>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 1 — Lengkapi CSS Flexbox
+       ═══════════════════════════════════════════ -->
+  <question type="ddwtos">
+    <name>
+      <text>Drag &amp; Drop — Lengkapi kode CSS Flexbox</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Seret kata yang tepat untuk melengkapi kode CSS berikut agar
+        menghasilkan layout flex dengan item tersusun <strong>horizontal</strong>
+        dan <strong>rata tengah</strong> secara vertikal:</p>
+        <pre style="background:#1e1e2e;color:#cdd6f4;padding:14px;border-radius:6px;font-size:13px;line-height:1.9;">
+.container {
+  display: [[1]];
+  flex-direction: [[2]];
+  align-items: [[3]];
+  justify-content: [[4]];
+  gap: 16px;
+}</pre>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Kode lengkap: <code>display: flex;</code> mengaktifkan flexbox,
+        <code>flex-direction: row</code> = horizontal,
+        <code>align-items: center</code> = rata tengah di sumbu silang (vertikal),
+        <code>justify-content: space-between</code> = item tersebar merata.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>1</shuffleanswers>
+
+    <!-- Jawaban yang benar untuk tiap celah [[n]] -->
+    <!-- [[1]] = flex, [[2]] = row, [[3]] = center, [[4]] = space-between -->
+
+    <dragbox>
+      <no>1</no>
+      <text>flex</text>
+    </dragbox>
+    <dragbox>
+      <no>2</no>
+      <text>row</text>
+    </dragbox>
+    <dragbox>
+      <no>3</no>
+      <text>center</text>
+    </dragbox>
+    <dragbox>
+      <no>4</no>
+      <text>space-between</text>
+    </dragbox>
+
+    <!-- Pengecoh -->
+    <dragbox>
+      <no>5</no>
+      <text>grid</text>
+    </dragbox>
+    <dragbox>
+      <no>6</no>
+      <text>column</text>
+    </dragbox>
+    <dragbox>
+      <no>7</no>
+      <text>flex-start</text>
+    </dragbox>
+    <dragbox>
+      <no>8</no>
+      <text>block</text>
+    </dragbox>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 2 — Lengkapi konsep JavaScript async
+       ═══════════════════════════════════════════ -->
+  <question type="ddwtos">
+    <name>
+      <text>Drag &amp; Drop — Lengkapi konsep JavaScript async/await</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Seret kata yang tepat untuk melengkapi penjelasan berikut:</p>
+        <p style="background:#f7f5ef;padding:14px;border-radius:6px;line-height:2.2;font-size:14px;">
+          Keyword <code>[[1]]</code> digunakan sebelum deklarasi fungsi untuk
+          menandai bahwa fungsi tersebut bersifat asinkron. Di dalam fungsi tersebut,
+          keyword <code>[[2]]</code> digunakan untuk menunggu hasil
+          <code>[[3]]</code> sebelum melanjutkan eksekusi kode berikutnya.
+          Jika terjadi error, kita tangkap dengan blok
+          <code>[[4]]</code>.
+        </p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Jawaban: <code>async</code> → <code>await</code> → <code>Promise</code> → <code>catch</code>.<br>
+        Pola lengkap: <code>async function fetchData() { try { const data = await fetch(url); } catch(err) { ... } }</code></p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>1</shuffleanswers>
+
+    <dragbox>
+      <no>1</no>
+      <text>async</text>
+    </dragbox>
+    <dragbox>
+      <no>2</no>
+      <text>await</text>
+    </dragbox>
+    <dragbox>
+      <no>3</no>
+      <text>Promise</text>
+    </dragbox>
+    <dragbox>
+      <no>4</no>
+      <text>catch</text>
+    </dragbox>
+
+    <!-- Pengecoh -->
+    <dragbox>
+      <no>5</no>
+      <text>sync</text>
+    </dragbox>
+    <dragbox>
+      <no>6</no>
+      <text>defer</text>
+    </dragbox>
+    <dragbox>
+      <no>7</no>
+      <text>callback</text>
+    </dragbox>
+    <dragbox>
+      <no>8</no>
+      <text>finally</text>
+    </dragbox>
+  </question>
+
+</quiz>

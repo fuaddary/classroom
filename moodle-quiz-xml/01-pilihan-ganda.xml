@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TIPE: Pilihan Ganda (Multiple Choice — Single Answer)
+  Import ke Moodle: Admin > Bank Soal > Import > Format: Moodle XML
+  MK: Pemrograman Web (ET234305) — Departemen Teknologi Informasi, ITS
+
+  PROMPT AI untuk membuat soal ini:
+  ────────────────────────────────────────────────────────────────────
+  Buatkan 5 soal pilihan ganda (single answer) topik "[TOPIK]" untuk
+  MK Pemrograman Web, tingkat kesulitan menengah. Setiap soal harus
+  memiliki: 1 jawaban benar (fraction="100") dan 3 pengecoh masuk akal
+  (fraction="0"), serta umpan balik singkat tiap opsi.
+  Output dalam format Moodle XML (<quiz>...</quiz>) dengan encoding UTF-8.
+  ────────────────────────────────────────────────────────────────────
+-->
+<quiz>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 1 — Konsep HTML Semantik
+       ═══════════════════════════════════════════ -->
+  <question type="multichoice">
+    <name>
+      <text>HTML Semantik — Tag yang tepat untuk konten utama halaman</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Tag HTML5 yang <strong>paling tepat</strong> untuk membungkus
+        konten utama (unik) sebuah halaman web adalah...</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Dalam HTML5, <code>&lt;main&gt;</code> digunakan untuk konten
+        utama yang unik per halaman. Lihat referensi MDN: HTML &lt;main&gt; element.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>&lt;main&gt;</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! <code>&lt;main&gt;</code> adalah elemen semantik untuk konten utama halaman.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<code>&lt;section&gt;</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ <code>&lt;section&gt;</code> digunakan untuk pengelompokan konten bertema, bukan konten utama tunggal.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<code>&lt;div&gt;</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ <code>&lt;div&gt;</code> adalah elemen non-semantik (generik), tidak memiliki makna struktural.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<code>&lt;article&gt;</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ <code>&lt;article&gt;</code> digunakan untuk konten mandiri yang bisa berdiri sendiri (mis. posting blog), bukan konten utama keseluruhan.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 2 — CSS Box Model
+       ═══════════════════════════════════════════ -->
+  <question type="multichoice">
+    <name>
+      <text>CSS Box Model — Properti jarak dalam elemen</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Perhatikan kode CSS berikut:</p>
+        <pre style="background:#f4f4f4;padding:8px;border-radius:4px;">
+.kotak {
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #333;
+  width: 200px;
+}</pre>
+        <p>Berapa <strong>total lebar</strong> elemen <code>.kotak</code>
+        yang dirender browser secara default (box-sizing: content-box)?</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Dengan <code>box-sizing: content-box</code>: total lebar =
+        width + padding kiri + padding kanan + border kiri + border kanan
+        = 200 + 20 + 20 + 2 + 2 = <strong>244px</strong>. Margin tidak termasuk lebar elemen.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="100" format="html">
+      <text>244px</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! 200 (width) + 40 (padding kiri+kanan) + 4 (border kiri+kanan) = 244px.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>200px</text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ 200px hanya nilai <code>width</code>-nya saja — belum termasuk padding dan border.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>264px</text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ 264px menghitung margin (yang tidak termasuk dalam lebar elemen).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>240px</text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ 240px lupa menghitung border (2px × 2 sisi = 4px).</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 3 — JavaScript DOM
+       ═══════════════════════════════════════════ -->
+  <question type="multichoice">
+    <name>
+      <text>JavaScript DOM — Memilih elemen dengan ID</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Manakah cara yang <strong>paling tepat</strong> untuk memilih
+        elemen dengan <code>id="tombol-kirim"</code> menggunakan JavaScript modern?</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p><code>document.getElementById()</code> dan
+        <code>document.querySelector('#id')</code> keduanya valid, namun
+        <code>querySelector</code> lebih fleksibel karena menerima selector CSS apapun.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>document.querySelector('#tombol-kirim')</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! <code>querySelector</code> menggunakan selector CSS — <code>#</code> berarti ID.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<code>document.getElement('tombol-kirim')</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ Method <code>getElement()</code> tidak ada di JavaScript.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<code>document.querySelector('.tombol-kirim')</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ <code>.</code> adalah selector <em>class</em>, bukan ID. Untuk ID gunakan <code>#</code>.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<code>document.selectById('tombol-kirim')</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ Method <code>selectById()</code> tidak ada. Yang benar adalah <code>getElementById()</code>.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

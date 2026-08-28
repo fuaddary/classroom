@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TIPE: Benar / Salah (True / False)
+  Mahasiswa memilih apakah pernyataan tersebut benar atau salah.
+  Import ke Moodle: Admin > Bank Soal > Import > Format: Moodle XML
+
+  PROMPT AI untuk membuat soal ini:
+  ────────────────────────────────────────────────────────────────────
+  Buatkan 5 pernyataan Benar/Salah topik "[TOPIK]" untuk MK
+  Pemrograman Web. Campurkan pernyataan yang benar dan salah (jangan
+  semua salah/semua benar). Sertakan penjelasan singkat mengapa
+  pernyataan itu benar/salah di bagian <feedback>.
+  Output Moodle XML dengan <question type="truefalse">.
+  ────────────────────────────────────────────────────────────────────
+-->
+<quiz>
+
+  <!-- Pernyataan 1 — BENAR -->
+  <question type="truefalse">
+    <name>
+      <text>B/S — CSS: display flex mengubah elemen menjadi flex container</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Menambahkan properti <code>display: flex</code> pada sebuah
+        elemen akan menjadikan elemen tersebut sebagai
+        <em>flex container</em> dan anak-anaknya menjadi
+        <em>flex item</em>.</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Pernyataan ini <strong>BENAR</strong>. <code>display: flex</code>
+        mengaktifkan Flexbox Layout pada elemen tersebut — elemen itu
+        menjadi container, dan semua anak langsungnya menjadi item
+        yang dapat diatur dengan properti flex.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>1</penalty>
+    <hidden>0</hidden>
+
+    <!-- Jawaban benar: true -->
+    <answer fraction="100">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! Itulah cara kerja Flexbox.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ Pernyataan ini sebenarnya BENAR — <code>display: flex</code> memang menjadikan elemen sebagai flex container.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pernyataan 2 — SALAH -->
+  <question type="truefalse">
+    <name>
+      <text>B/S — JavaScript: let dan var memiliki scope yang sama</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Variabel yang dideklarasikan dengan <code>let</code> dan
+        <code>var</code> memiliki <em>scope</em> (cakupan) yang
+        persis sama di JavaScript.</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Pernyataan ini <strong>SALAH</strong>.<br>
+        • <code>var</code> memiliki <em>function scope</em> (atau global scope)
+        dan mengalami <em>hoisting</em>.<br>
+        • <code>let</code> memiliki <em>block scope</em> — hanya berlaku
+        di dalam blok <code>{}</code> tempat ia dideklarasikan, dan tidak
+        di-hoist dengan cara yang sama.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>1</penalty>
+    <hidden>0</hidden>
+
+    <answer fraction="0">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ Tidak tepat. <code>let</code> = block scope, <code>var</code> = function scope. Keduanya berbeda.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar bahwa pernyataan itu SALAH! <code>let</code> dan <code>var</code> memiliki scope yang berbeda.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pernyataan 3 — BENAR -->
+  <question type="truefalse">
+    <name>
+      <text>B/S — HTTP: GET request tidak boleh mengubah data di server</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Berdasarkan standar HTTP, method <code>GET</code> seharusnya
+        bersifat <em>safe</em> dan <em>idempotent</em> — artinya tidak
+        boleh mengubah data di server.</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Pernyataan ini <strong>BENAR</strong>. RFC 7231 menyatakan GET
+        adalah <em>safe method</em> — seharusnya hanya membaca data, bukan
+        memodifikasinya. Operasi yang mengubah data seharusnya menggunakan
+        POST, PUT, PATCH, atau DELETE.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>1</penalty>
+    <hidden>0</hidden>
+
+    <answer fraction="100">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! GET adalah safe method — hanya untuk membaca data.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ Pernyataan itu sebenarnya BENAR. GET memang seharusnya tidak mengubah data.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pernyataan 4 — SALAH -->
+  <question type="truefalse">
+    <name>
+      <text>B/S — CSS: padding masuk dalam perhitungan width secara default</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Secara default (tanpa mengatur <code>box-sizing</code>),
+        nilai <code>padding</code> sudah termasuk dalam nilai
+        <code>width</code> yang ditentukan di CSS.</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Pernyataan ini <strong>SALAH</strong>. Secara default,
+        <code>box-sizing: content-box</code> — artinya <code>width</code>
+        hanya mengatur lebar <em>konten</em>, dan padding/border
+        <strong>ditambahkan di luar</strong> nilai width tersebut.
+        Gunakan <code>box-sizing: border-box</code> agar padding
+        masuk dalam width.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>1</penalty>
+    <hidden>0</hidden>
+
+    <answer fraction="0">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ Salah. Default <code>box-sizing: content-box</code> — padding ditambah di luar width.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar bahwa pernyataan itu SALAH! Secara default padding ditambahkan di luar width (content-box).</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pernyataan 5 — BENAR -->
+  <question type="truefalse">
+    <name>
+      <text>B/S — Vue.js: v-model adalah two-way data binding</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Direktif <code>v-model</code> di Vue.js mengimplementasikan
+        <em>two-way data binding</em> — perubahan di input form
+        otomatis memperbarui data, dan perubahan data otomatis
+        memperbarui tampilan input.</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Pernyataan ini <strong>BENAR</strong>. <code>v-model</code>
+        adalah syntactic sugar untuk <code>:value</code> + <code>@input</code>
+        — data reaktif di komponen sinkron dua arah dengan elemen form.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>1</penalty>
+    <hidden>0</hidden>
+
+    <answer fraction="100">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! <code>v-model</code> = two-way data binding di Vue.js.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ Pernyataan itu sebenarnya BENAR. <code>v-model</code> memang two-way binding.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

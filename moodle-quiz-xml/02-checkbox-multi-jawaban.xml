@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TIPE: Checkbox / Multi-Jawaban (Multiple Choice — Multiple Answers)
+  single = false → Moodle menampilkan checkbox, bukan radio button
+  Skor: partial credit — setiap jawaban benar dapat fraction positif,
+        jawaban salah dipilih mendapat fraction negatif.
+  Import ke Moodle: Admin > Bank Soal > Import > Format: Moodle XML
+
+  PROMPT AI untuk membuat soal ini:
+  ────────────────────────────────────────────────────────────────────
+  Buatkan 3 soal checkbox (multi-jawaban, lebih dari 1 jawaban benar)
+  topik "[TOPIK]" untuk MK Pemrograman Web. Setiap soal: 2–3 jawaban
+  benar dengan skor terbagi rata (fraction total = 100 sebelum penalti),
+  dan 2 pengecoh (fraction negatif agar tidak tebak-tebakan).
+  Output Moodle XML dengan <single>false</single>.
+  ────────────────────────────────────────────────────────────────────
+-->
+<quiz>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 1 — Tag HTML Semantik yang tepat
+       Jawaban benar: header, nav, footer
+       ═══════════════════════════════════════════ -->
+  <question type="multichoice">
+    <name>
+      <text>HTML Semantik — Tag-tag yang termasuk elemen semantik HTML5</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Pilih <strong>semua</strong> tag yang termasuk elemen
+        <em>semantik</em> HTML5 (bisa lebih dari satu):</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Elemen semantik HTML5 memberi makna pada struktur dokumen:
+        <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+        <code>&lt;footer&gt;</code>, <code>&lt;main&gt;</code>,
+        <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, dll.
+        <code>&lt;div&gt;</code> dan <code>&lt;span&gt;</code> adalah elemen
+        generik/non-semantik.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <!-- Jawaban benar (3 opsi, fraction = 100/3 ≈ 33.33% each) -->
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<code>&lt;header&gt;</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! <code>&lt;header&gt;</code> adalah elemen semantik HTML5.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<code>&lt;nav&gt;</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! <code>&lt;nav&gt;</code> mendefinisikan navigasi utama.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<code>&lt;footer&gt;</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! <code>&lt;footer&gt;</code> mendefinisikan bagian bawah halaman/section.</p>]]></text>
+      </feedback>
+    </answer>
+
+    <!-- Pengecoh (fraction negatif) -->
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>&lt;div&gt;</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ <code>&lt;div&gt;</code> adalah elemen generik (non-semantik).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>&lt;span&gt;</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ <code>&lt;span&gt;</code> adalah elemen inline generik (non-semantik).</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 2 — Properti CSS Flexbox
+       Jawaban benar: justify-content, align-items, flex-direction
+       ═══════════════════════════════════════════ -->
+  <question type="multichoice">
+    <name>
+      <text>CSS Flexbox — Properti yang berlaku pada flex container</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Manakah properti CSS yang berlaku pada
+        <strong>flex container</strong> (elemen yang memiliki
+        <code>display: flex</code>)? Pilih semua yang benar.</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Properti <em>flex container</em>: <code>justify-content</code>,
+        <code>align-items</code>, <code>flex-direction</code>,
+        <code>flex-wrap</code>, <code>gap</code>, dll.
+        Sedangkan <code>flex-grow</code> dan <code>align-self</code>
+        adalah properti <em>flex item</em> (elemen di dalam container).</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<code>justify-content</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! Mengatur distribusi item pada sumbu utama (main axis).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<code>align-items</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! Mengatur penyelarasan item pada sumbu silang (cross axis).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="33.33333" format="html">
+      <text><![CDATA[<code>flex-direction</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! Menentukan arah sumbu utama (row/column).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>flex-grow</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ <code>flex-grow</code> adalah properti flex <em>item</em>, bukan container.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>align-self</code>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>❌ <code>align-self</code> adalah properti flex <em>item</em> untuk mengoverride <code>align-items</code> individual.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

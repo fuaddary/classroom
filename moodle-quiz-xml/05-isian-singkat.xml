@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TIPE: Isian Singkat (Short Answer)
+  Mahasiswa mengetik jawaban singkat. Moodle cocokkan dengan daftar
+  jawaban yang diterima (case-insensitive bisa diatur).
+  Import ke Moodle: Admin > Bank Soal > Import > Format: Moodle XML
+
+  PROMPT AI untuk membuat soal ini:
+  ────────────────────────────────────────────────────────────────────
+  Buatkan 4 soal isian singkat (short answer) topik "[TOPIK]" untuk
+  MK Pemrograman Web. Setiap soal: jawaban berupa 1 kata/frase pendek
+  yang spesifik dan tidak ambigu. Sertakan variasi penulisan jawaban
+  yang diterima (mis. huruf besar/kecil, dengan/tanpa spasi).
+  Output Moodle XML dengan <question type="shortanswer">.
+  Gunakan <usecase>0</usecase> untuk case-insensitive.
+  ────────────────────────────────────────────────────────────────────
+-->
+<quiz>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 1 — Properti CSS untuk warna teks
+       ═══════════════════════════════════════════ -->
+  <question type="shortanswer">
+    <name>
+      <text>CSS — Properti untuk mengubah warna teks</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Properti CSS apakah yang digunakan untuk mengubah
+        <strong>warna teks</strong> sebuah elemen?
+        (Tulis nama properti saja, tanpa nilai)</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Properti CSS untuk warna teks adalah <code>color</code>.
+        Contoh: <code>color: #333;</code> atau <code>color: red;</code></p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase><!-- 0 = case-insensitive -->
+
+    <!-- Semua variasi jawaban yang diterima -->
+    <answer fraction="100">
+      <text>color</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! <code>color</code> adalah properti CSS untuk warna teks.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>color:</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar (dengan titik dua juga diterima).</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 2 — Singkatan HTTP
+       ═══════════════════════════════════════════ -->
+  <question type="shortanswer">
+    <name>
+      <text>Web — Singkatan HTTP</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Apa kepanjangan dari singkatan <strong>HTTP</strong>?</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>HTTP = <strong>HyperText Transfer Protocol</strong> —
+        protokol komunikasi yang digunakan browser untuk bertukar
+        data dengan web server.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+
+    <answer fraction="100">
+      <text>HyperText Transfer Protocol</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar!</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Hypertext Transfer Protocol</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar!</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 3 — Method JavaScript memilih elemen by ID
+       ═══════════════════════════════════════════ -->
+  <question type="shortanswer">
+    <name>
+      <text>JavaScript — Method bawaan untuk memilih elemen by ID</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Tuliskan nama <strong>method JavaScript bawaan (vanilla)</strong>
+        yang digunakan untuk memilih elemen HTML berdasarkan
+        atribut <code>id</code>-nya.
+        (Tulis nama method saja, tanpa <code>document.</code>)</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Jawaban: <code>getElementById</code><br>
+        Digunakan sebagai <code>document.getElementById('nama-id')</code></p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+
+    <answer fraction="100">
+      <text>getElementById</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar!</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>getElementById()</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar (dengan tanda kurung juga diterima).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="50">
+      <text>querySelector</text>
+      <feedback format="html">
+        <text><![CDATA[<p>⚠️ Hampir benar! <code>querySelector</code> juga bisa digunakan, tapi jawaban yang lebih spesifik adalah <code>getElementById</code>.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 4 — Tag HTML untuk judul terpenting
+       ═══════════════════════════════════════════ -->
+  <question type="shortanswer">
+    <name>
+      <text>HTML — Tag untuk heading paling penting di halaman</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Dalam HTML, tag heading mana yang memiliki tingkatan/hierarki
+        <strong>paling tinggi</strong> (paling penting secara semantik)?
+        Tulis tag-nya (contoh format: <code>&lt;h1&gt;</code>)</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Jawaban: <code>&lt;h1&gt;</code> — Heading level 1 adalah
+        judul utama halaman, dan hanya boleh ada 1 per halaman untuk
+        praktik SEO yang baik.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+
+    <answer fraction="100">
+      <text>&lt;h1&gt;</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar! <code>&lt;h1&gt;</code> adalah heading tertinggi.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>h1</text>
+      <feedback format="html">
+        <text><![CDATA[<p>✅ Benar (tanpa tag bracket juga diterima).</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

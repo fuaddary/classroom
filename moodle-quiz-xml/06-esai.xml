@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TIPE: Esai (Essay)
+  Mahasiswa menulis jawaban panjang. Dinilai manual oleh dosen/grader.
+  Import ke Moodle: Admin > Bank Soal > Import > Format: Moodle XML
+
+  PROMPT AI untuk membuat soal ini:
+  ────────────────────────────────────────────────────────────────────
+  Buatkan 3 soal esai topik "[TOPIK]" untuk MK Pemrograman Web yang:
+  1. Mengukur kemampuan analisis/evaluasi (bukan sekadar definisi)
+  2. Dilengkapi dengan panduan jawaban (responsetemplate) sebagai
+     kerangka untuk mahasiswa
+  3. Disertai rubrik penilaian singkat di bagian graderinfo
+  Output Moodle XML dengan <question type="essay">.
+  ────────────────────────────────────────────────────────────────────
+-->
+<quiz>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 1 — Analisis: Vanilla JS vs Framework
+       ═══════════════════════════════════════════ -->
+  <question type="essay">
+    <name>
+      <text>Esai — Analisis: Kapan gunakan Vanilla JS vs Framework</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Dalam pengembangan aplikasi web modern, seorang developer
+        dihadapkan pada pilihan: menggunakan <strong>Vanilla JavaScript</strong>
+        atau <strong>framework front-end</strong> (seperti Vue.js, React, Angular).</p>
+
+        <p><strong>Analisis dan jelaskan:</strong></p>
+        <ol>
+          <li>Faktor apa saja yang menentukan pilihan antara Vanilla JS dan framework?</li>
+          <li>Berikan <em>minimal 2 skenario proyek</em> di mana Vanilla JS lebih tepat,
+              dan 2 skenario di mana framework lebih tepat. Jelaskan alasannya.</li>
+          <li>Jelaskan trade-off utama (kelebihan dan kekurangan) dari masing-masing pendekatan.</li>
+        </ol>
+        <p><em>Panjang jawaban yang diharapkan: 300–500 kata.</em></p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Jawaban yang baik mencakup: kompleksitas proyek, ukuran tim,
+        kebutuhan reaktivitas data, performa, learning curve, dan maintainability.</p>
+      ]]></text>
+    </generalfeedback>
+
+    <!-- Template kerangka jawaban yang muncul di kotak teks mahasiswa -->
+    <responsetemplate format="html">
+      <text><![CDATA[
+        <p><strong>1. Faktor penentu pilihan:</strong></p>
+        <p>[Isi di sini...]</p>
+
+        <p><strong>2. Skenario yang tepat:</strong></p>
+        <p>Vanilla JS tepat untuk:
+        <br>• Skenario 1: ...
+        <br>• Skenario 2: ...</p>
+        <p>Framework tepat untuk:
+        <br>• Skenario 1: ...
+        <br>• Skenario 2: ...</p>
+
+        <p><strong>3. Trade-off:</strong></p>
+        <p>[Isi di sini...]</p>
+      ]]></text>
+    </responsetemplate>
+
+    <!-- Panduan penilaian untuk grader/dosen -->
+    <graderinfo format="html">
+      <text><![CDATA[
+        <h3>Rubrik Penilaian Esai (100 poin)</h3>
+        <table border="1" cellpadding="5" style="border-collapse:collapse;">
+          <tr><th>Kriteria</th><th>Bobot</th><th>Indikator</th></tr>
+          <tr><td>Kelengkapan faktor (poin 1)</td><td>25</td>
+              <td>Menyebut ≥3 faktor relevan dengan penjelasan</td></tr>
+          <tr><td>Ketepatan skenario (poin 2)</td><td>40</td>
+              <td>4 skenario tepat dengan alasan yang logis</td></tr>
+          <tr><td>Analisis trade-off (poin 3)</td><td>25</td>
+              <td>Trade-off seimbang, tidak bias ke satu sisi</td></tr>
+          <tr><td>Bahasa &amp; struktur</td><td>10</td>
+              <td>Rapi, terstruktur, mudah dipahami</td></tr>
+        </table>
+      ]]></text>
+    </graderinfo>
+
+    <defaultgrade>10</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <responseformat>editor</responseformat>
+    <responserequired>1</responserequired>
+    <responsefieldlines>15</responsefieldlines>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 2 — Evaluasi desain API RESTful
+       ═══════════════════════════════════════════ -->
+  <question type="essay">
+    <name>
+      <text>Esai — Evaluasi rancangan API RESTful</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Perhatikan rancangan endpoint API berikut untuk aplikasi
+        manajemen mahasiswa:</p>
+        <pre style="background:#f4f4f4;padding:10px;border-radius:4px;font-size:13px;">
+GET    /getMahasiswa
+POST   /createMahasiswa
+GET    /deleteMahasiswa?id=5
+POST   /updateMahasiswa/3
+GET    /mahasiswaList/search?nama=budi</pre>
+
+        <p><strong>Evaluasi rancangan di atas dan jawab:</strong></p>
+        <ol>
+          <li>Identifikasi <em>minimal 3 masalah/pelanggaran</em> konvensi RESTful API dari endpoint di atas.</li>
+          <li>Tulis ulang semua endpoint tersebut mengikuti konvensi REST yang benar.</li>
+          <li>Jelaskan <em>mengapa</em> konvensi RESTful penting dalam pengembangan API.</li>
+        </ol>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Masalah utama: verb dalam URL (getMahasiswa, createMahasiswa),
+        penggunaan GET untuk operasi yang mengubah data (deleteMahasiswa),
+        tidak konsisten penggunaan method HTTP.
+        Versi RESTful: GET /mahasiswa, POST /mahasiswa, DELETE /mahasiswa/5,
+        PUT /mahasiswa/3, GET /mahasiswa?nama=budi</p>
+      ]]></text>
+    </generalfeedback>
+
+    <responsetemplate format="html">
+      <text><![CDATA[
+        <p><strong>1. Masalah yang ditemukan:</strong></p>
+        <p>• Masalah 1: ...<br>• Masalah 2: ...<br>• Masalah 3: ...</p>
+
+        <p><strong>2. Endpoint yang diperbaiki:</strong></p>
+        <pre>
+[METHOD] /[resource]      → [penjelasan]
+...
+        </pre>
+
+        <p><strong>3. Pentingnya konvensi RESTful:</strong></p>
+        <p>[Isi di sini...]</p>
+      ]]></text>
+    </responsetemplate>
+
+    <graderinfo format="html">
+      <text><![CDATA[
+        <h3>Rubrik Penilaian (100 poin)</h3>
+        <table border="1" cellpadding="5" style="border-collapse:collapse;">
+          <tr><th>Kriteria</th><th>Bobot</th></tr>
+          <tr><td>Identifikasi masalah (≥3 valid)</td><td>30</td></tr>
+          <tr><td>Perbaikan endpoint (semua 5 endpoint benar)</td><td>40</td></tr>
+          <tr><td>Penjelasan pentingnya konvensi</td><td>20</td></tr>
+          <tr><td>Kejelasan &amp; struktur jawaban</td><td>10</td></tr>
+        </table>
+      ]]></text>
+    </graderinfo>
+
+    <defaultgrade>10</defaultgrade>
+    <penalty>0</penalty>
+    <hidden>0</hidden>
+    <responseformat>editor</responseformat>
+    <responserequired>1</responserequired>
+    <responsefieldlines>15</responsefieldlines>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+  </question>
+
+</quiz>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TIPE: Mencocokkan (Matching)
+  Mahasiswa mencocokkan setiap item di kolom kiri dengan pasangannya di kanan.
+  Import ke Moodle: Admin > Bank Soal > Import > Format: Moodle XML
+
+  PROMPT AI untuk membuat soal ini:
+  ────────────────────────────────────────────────────────────────────
+  Buatkan 2 soal mencocokkan (matching) topik "[TOPIK]" untuk MK
+  Pemrograman Web. Setiap soal: 4–5 pasangan konsep-definisi/contoh.
+  Format: setiap pasangan dalam tag <subquestion> berisi <text> (item kiri)
+  dan <answer><text> (pasangan kanan).
+  Output Moodle XML dengan <question type="matching">.
+  ────────────────────────────────────────────────────────────────────
+-->
+<quiz>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 1 — Cocokkan tag HTML dengan fungsinya
+       ═══════════════════════════════════════════ -->
+  <question type="matching">
+    <name>
+      <text>HTML — Cocokkan tag dengan fungsinya</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Cocokkan setiap <strong>tag HTML</strong> dengan
+        <strong>fungsi utamanya</strong>:</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Pelajari fungsi elemen semantik HTML5 di MDN Web Docs:
+        <em>HTML elements reference</em>.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>&lt;a href="..."&gt;</code>]]></text>
+      <answer format="html">
+        <text>Membuat tautan/hyperlink ke URL lain</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>&lt;img src="..." alt="..."&gt;</code>]]></text>
+      <answer format="html">
+        <text>Menampilkan gambar dengan teks alternatif</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>&lt;form action="..." method="..."&gt;</code>]]></text>
+      <answer format="html">
+        <text>Membuat formulir untuk mengirim data ke server</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>&lt;table&gt;</code>]]></text>
+      <answer format="html">
+        <text>Menampilkan data dalam format baris dan kolom</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>&lt;input type="submit"&gt;</code>]]></text>
+      <answer format="html">
+        <text>Tombol untuk mengirimkan formulir</text>
+      </answer>
+    </subquestion>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 2 — Cocokkan properti CSS dengan efeknya
+       ═══════════════════════════════════════════ -->
+  <question type="matching">
+    <name>
+      <text>CSS — Cocokkan properti dengan efek yang dihasilkan</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Cocokkan setiap <strong>properti CSS</strong> dengan
+        <strong>efek yang dihasilkan</strong>:</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Pahami perbedaan <code>margin</code> vs <code>padding</code>,
+        serta fungsi tiap properti layout di MDN CSS reference.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>margin: auto</code>]]></text>
+      <answer format="html">
+        <text>Memusatkan elemen secara horizontal dalam container</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>position: fixed</code>]]></text>
+      <answer format="html">
+        <text>Elemen tetap di posisi layar saat halaman di-scroll</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>overflow: hidden</code>]]></text>
+      <answer format="html">
+        <text>Konten yang melebihi ukuran elemen dipotong/disembunyikan</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>z-index: 10</code>]]></text>
+      <answer format="html">
+        <text>Mengatur urutan tumpukan elemen yang saling overlap</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><![CDATA[<code>transition: all 0.3s ease</code>]]></text>
+      <answer format="html">
+        <text>Menambahkan animasi halus saat properti CSS berubah</text>
+      </answer>
+    </subquestion>
+  </question>
+
+  <!-- ═══════════════════════════════════════════
+       SOAL 3 — Cocokkan metode HTTP dengan kegunaannya
+       ═══════════════════════════════════════════ -->
+  <question type="matching">
+    <name>
+      <text>HTTP Method — Cocokkan dengan operasi CRUD</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <p>Cocokkan setiap <strong>HTTP Method</strong> dengan
+        <strong>operasi CRUD</strong> yang sesuai:</p>
+      ]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[
+        <p>Konvensi REST API: GET=Read, POST=Create, PUT/PATCH=Update, DELETE=Delete.</p>
+      ]]></text>
+    </generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+
+    <subquestion format="html">
+      <text><strong>GET</strong></text>
+      <answer format="html">
+        <text>Read — Mengambil/membaca data dari server</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><strong>POST</strong></text>
+      <answer format="html">
+        <text>Create — Mengirim data baru ke server</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><strong>PUT</strong></text>
+      <answer format="html">
+        <text>Update — Memperbarui/mengganti keseluruhan data</text>
+      </answer>
+    </subquestion>
+
+    <subquestion format="html">
+      <text><strong>DELETE</strong></text>
+      <answer format="html">
+        <text>Delete — Menghapus data dari server</text>
+      </answer>
+    </subquestion>
+  </question>
+
+</quiz>
