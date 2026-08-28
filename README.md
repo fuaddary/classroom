@@ -1,76 +1,47 @@
 # 🎓 myITS Classroom — Panduan Prompting AI
 
-> **Pemrograman Web (ET234305)** — Departemen Teknologi Informasi, ITS
-> Dosen Pengampu: Fuad Dary Rosyadi, S.Kom., M.Kom.
+> **Pemrograman Web (ET234305)** — Departemen Teknologi Informasi, ITS  
+> Dosen Pengampu: **Fuad Dary Rosyadi, S.Kom., M.Kom.**
 
-Kumpulan **prompt AI siap pakai + template HTML + soal XML** untuk mengisi setiap komponen myITS Classroom (Moodle) secara efisien.
+Panduan ini berisi **prompt AI siap pakai + template HTML siap tempel** untuk setiap komponen myITS Classroom (Moodle), lengkap dengan contoh hasil dan pratinjau tampilan.
+
+> ⚠️ **Prinsip penting:** AI membantu menyusun draf — dosen tetap wajib memverifikasi terutama referensi/pustaka, angka bobot penilaian, dan ketepatan materi teknis sebelum dipublikasikan ke mahasiswa.
 
 ---
 
-## ⚡ Quick Start
+## ⚡ Quick Start — 3 Langkah
 
 ```
-1. Pilih komponen dari tabel di bawah
-2. Buka halaman wiki → salin prompt → tempel ke AI (lampirkan RPS)
-3. Salin HTML hasil → tempel ke Moodle via ikon </> Edit HTML source
+1. Temukan komponen yang ingin diisi dari Daftar Isi di bawah
+2. Salin prompt → tempel ke AI (Claude/ChatGPT/Gemini) + lampirkan RPS
+3. Salin HTML hasil → di Moodle klik ikon </> Edit HTML source → tempel → Save
 ```
 
-> ⚠️ Selalu **verifikasi output AI** — terutama referensi, bobot penilaian, dan detail teknis.
-
 ---
 
-## 📚 Wiki — Panduan Per Komponen
+## 📖 Daftar Isi
 
-### A. Konten Wajib / Anjuran
+**A. Konten Wajib/Anjuran**
+1. [Identitas & Informasi Umum Mata Kuliah](#1-identitas--informasi-umum-mata-kuliah)
+2. [RPS](#2-rps-rencana-pembelajaran-semester)
+3. [Kontrak Perkuliahan / Tata Tertib](#3-kontrak-perkuliahan--tata-tertib-kelas)
+4. [Materi Pembelajaran per Pertemuan](#4-materi-pembelajaran-per-pertemuan)
+5. [Referensi / Bacaan Tambahan](#5-referensi--bacaan-tambahan)
+6. [Rubrik Penilaian](#6-rubrik-penilaian)
+7. [Pengumuman](#7-pengumuman)
+8. [Jadwal & Linimasa Perkuliahan](#8-jadwal--linimasa-perkuliahan)
 
-| # | Komponen | Status | Halaman |
-|---|----------|--------|---------|
-| 1 | Identitas & Informasi Umum MK | 🟢 Wajib | [→ Buka](wiki/01-identitas.md) |
-| 2 | RPS (Ringkasan Navigasi) | 🟢 Wajib | [→ Buka](wiki/02-rps.md) |
-| 3 | Kontrak Perkuliahan / Tata Tertib | 🟢 Wajib | [→ Buka](wiki/03-kontrak.md) |
-| 4 | Materi Pembelajaran per Pertemuan | 🟢 Wajib | [→ Buka](wiki/04-materi.md) |
-| 5 | Referensi & Bacaan Tambahan | 🔵 Anjuran | [→ Buka](wiki/05-referensi.md) |
-| 6 | Rubrik Penilaian | 🟢 Wajib | [→ Buka](wiki/06-rubrik.md) |
-| 7 | Pengumuman | 🟢 Wajib | [→ Buka](wiki/07-pengumuman.md) |
-| 8 | Jadwal & Linimasa Perkuliahan | 🟢 Wajib | [→ Buka](wiki/08-linimasa.md) |
+**B. Aktivitas Pembelajaran**
+9. [Forum Diskusi](#9-forum-diskusi)
+10. [Penugasan (Assignment)](#10-penugasan-assignment)
+11. [Kuis / Evaluasi Formatif ⭐ (7 jenis soal + XML)](#11-kuis--evaluasi-formatif)
+12. [Presensi Daring](#12-presensi-daring)
+13. [ETS & EAS](#13-ets--eas)
+14. [Sesi Sinkron (Live Session)](#14-sesi-sinkron-live-session)
+15. [Survei / Umpan Balik](#15-survei--umpan-balik)
 
-### B. Aktivitas Pembelajaran
-
-| # | Komponen | Status | Halaman |
-|---|----------|--------|---------|
-| 9 | Forum Diskusi | 🟢 Wajib | [→ Buka](wiki/09-forum.md) |
-| 10 | Penugasan (Assignment) | 🟢 Wajib | [→ Buka](wiki/10-assignment.md) |
-| 11 | Kuis / Evaluasi Formatif ⭐ | 🟢 Wajib | [→ Buka](wiki/11-kuis.md) |
-| 12 | Presensi Daring | 🔵 Anjuran | [→ Buka](wiki/12-presensi.md) |
-| 13 | ETS & EAS | 🟢 Wajib | [→ Buka](wiki/13-ets-eas.md) |
-| 14 | Sesi Sinkron (Live Session) | 🔵 Anjuran | [→ Buka](wiki/14-live-session.md) |
-| 15 | Survei & Umpan Balik | 🔵 Anjuran | [→ Buka](wiki/15-survei.md) |
-
-### C. Referensi
-
-| Halaman | Isi |
-|---------|-----|
-| [Tips Prompting Efektif](wiki/tips-prompting.md) | 5 prinsip prompting + alur kerja yang direkomendasikan |
-| [Pengantar Wiki](wiki/00-pengantar.md) | Gambaran umum & struktur repositori |
-
----
-
-## 🎮 Soal Kuis — Moodle XML (7 Jenis)
-
-Direktori [`moodle-quiz-xml/`](moodle-quiz-xml/) berisi soal-soal siap import ke bank soal Moodle.
-
-| File | Jenis Soal | Jumlah Soal |
-|------|-----------|-------------|
-| [`00-bank-soal-lengkap.xml`](moodle-quiz-xml/00-bank-soal-lengkap.xml) | **Semua jenis (gabungan)** | **21 soal** |
-| [`01-pilihan-ganda.xml`](moodle-quiz-xml/01-pilihan-ganda.xml) | Pilihan Ganda (radio button) | 3 soal |
-| [`02-checkbox-multi-jawaban.xml`](moodle-quiz-xml/02-checkbox-multi-jawaban.xml) | Checkbox / Multi-Jawaban | 2 soal |
-| [`03-mencocokkan.xml`](moodle-quiz-xml/03-mencocokkan.xml) | Mencocokkan (Matching) | 3 soal |
-| [`04-benar-salah.xml`](moodle-quiz-xml/04-benar-salah.xml) | Benar / Salah (True/False) | 5 soal |
-| [`05-isian-singkat.xml`](moodle-quiz-xml/05-isian-singkat.xml) | Isian Singkat (Short Answer) | 4 soal |
-| [`06-esai.xml`](moodle-quiz-xml/06-esai.xml) | Esai (dengan rubrik & template) | 2 soal |
-| [`07-drag-drop-teks.xml`](moodle-quiz-xml/07-drag-drop-teks.xml) | Drag & Drop ke Teks | 2 soal |
-
-**Cara import:** Moodle → Admin → Bank Soal → Import → Format: **Moodle XML** → Upload → Import
+**C. Referensi**
+- [Tips Prompting Efektif](#-tips-prompting-efektif)
 
 ---
 
@@ -78,14 +49,18 @@ Direktori [`moodle-quiz-xml/`](moodle-quiz-xml/) berisi soal-soal siap import ke
 
 ```
 classroom/
-├── README.md                   ← Anda di sini (hub navigasi)
-├── wiki/                       ← 17 halaman panduan terstruktur
-│   ├── 00-pengantar.md
-│   ├── 01-identitas.md … 15-survei.md
-│   └── tips-prompting.md
-├── moodle-html-per-bagian/     ← 15 file HTML fragment siap tempel Moodle
-├── moodle-quiz-xml/            ← 8 file XML soal kuis siap import
-├── screenshot-preview/         ← Pratinjau tampilan tiap bagian
+├── README.md                        ← Panduan lengkap (file ini)
+├── moodle-html-per-bagian/          ← 15 file HTML fragment siap tempel Moodle
+├── moodle-quiz-xml/                 ← 8 file XML soal kuis siap import (21 soal)
+│   ├── 00-bank-soal-lengkap.xml     ← Semua jenis dalam 1 file
+│   ├── 01-pilihan-ganda.xml
+│   ├── 02-checkbox-multi-jawaban.xml
+│   ├── 03-mencocokkan.xml
+│   ├── 04-benar-salah.xml
+│   ├── 05-isian-singkat.xml
+│   ├── 06-esai.xml
+│   └── 07-drag-drop-teks.xml
+├── screenshot-preview/              ← Pratinjau tampilan tiap bagian di Moodle
 ├── info-kelas-pemrograman-web.html
 ├── info-kelas-pemrograman-web-moodle.html
 └── dekorasi-kelas-ti-its.html
@@ -93,14 +68,765 @@ classroom/
 
 ---
 
-## 📖 Cara Pakai File HTML di Moodle
+## A. Konten Wajib / Anjuran
 
-1. Buka file `.html` di `moodle-html-per-bagian/` → salin semua isinya.
-2. Di Moodle, buka Label / Page / Forum / Assignment yang relevan.
-3. Klik ikon **`</>` Edit HTML source** di toolbar editor (Atto/TinyMCE).
-4. Tempel kode HTML → klik Update/Save.
 
-> Jangan tempel langsung ke area teks biasa — Moodle akan membersihkan/merusak markup.
+
+### 1. Identitas & Informasi Umum Mata Kuliah
+
+> **Status:** 🟢 Wajib
+
+Blok identitas: nama MK, kode, SKS, dosen pengampu, deskripsi singkat, kontak & jam konsultasi.
+
+**💡 Prompt AI:**
+
+```
+Saya dosen pengampu MK "Pemrograman Web" (ET234305) di Departemen Teknologi
+Informasi ITS. Berikut RPS mata kuliah saya [tempel/lampirkan RPS].
+
+Buatkan blok "Identitas & Informasi Umum Mata Kuliah" untuk halaman utama
+myITS Classroom, mencakup: nama MK, kode, SKS, dosen pengampu, deskripsi
+singkat (maks. 3 kalimat, bahasa mudah dipahami mahasiswa), dan format
+kontak/jam konsultasi. Hasilkan dalam format HTML dengan inline style
+siap ditempel ke Edit HTML source Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Identitas & Informasi Umum</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">Pemrograman Web (ET234305) &mdash; 4 SKS (T=3, P=1)</h2>
+  <p style="font-size:14px;line-height:1.7;margin:0 0 10px;">
+    <b>Dosen Pengampu:</b> Fuad Dary Rosyadi, S.Kom., M.Kom.</p>
+    <p style="font-size:14px;line-height:1.7;margin:0 0 10px;">
+    Mata kuliah ini membahas konsep, teknologi, dan keterampilan untuk mengembangkan aplikasi web
+    modern &mdash; mulai dari HTML, CSS, dan JavaScript, hingga framework front-end/server-side,
+    manajemen data, dan hosting. Mahasiswa akan berlatih membangun aplikasi web interaktif dan
+    responsif melalui praktikum dan proyek CRUD.</p>
+    <p style="font-size:13px;line-height:1.8;margin:0;">
+    <span style="display:block;color:#5b6b8c;font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;">kontak &amp; jam konsultasi</span>
+    [email@its.ac.id] &middot; [Hari, jam, ruang/tautan]</p>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![1. Identitas & Informasi Umum Mata Kuliah](screenshot-preview/01-identitas.png)
+
+---
+
+
+### 2. RPS (Rencana Pembelajaran Semester)
+
+> **Status:** 🟢 Wajib
+
+Ringkasan navigasi RPS: CPL yang dibebankan, CPMK, bahan kajian, dan komponen evaluasi beserta bobot.
+
+**💡 Prompt AI:**
+
+```
+Berikut file RPS resmi MK Pemrograman Web [lampirkan PDF/DOCX RPS].
+
+Buatkan ringkasan RPS dalam bentuk poin-poin terstruktur untuk
+ditampilkan di section pengantar myITS Classroom (bukan menggantikan
+dokumen RPS aslinya — hanya ringkasan navigasi): CPL yang dibebankan,
+daftar CPMK, daftar bahan kajian, dan komponen evaluasi beserta
+bobotnya. Hasilkan dalam format HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Ringkasan RPS</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">Pemrograman Web</h2>
+  <p style="font-size:14px;margin:0 0 8px;"><b>CPL yang dibebankan:</b> CPL-3 &mdash; Mampu menyelesaikan masalah dengan mengimplementasikan TIK, memperhatikan prinsip keberlanjutan, serta memahami kewirausahaan berbasis teknologi.</p>
+    <p style="font-size:14px;margin:12px 0 6px;"><b>CPMK:</b></p>
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <tr><td style="padding:4px 8px 4px 0;width:80px;"><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#0b1d3a;color:#4fd6d6;padding:2px 8px;border-radius:5px;">CPMK-1</span></td><td style="padding:4px 0;">Menjelaskan konsep pemrograman web (bobot 10%)</td></tr>
+      <tr><td style="padding:4px 8px 4px 0;"><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#0b1d3a;color:#4fd6d6;padding:2px 8px;border-radius:5px;">CPMK-2</span></td><td style="padding:4px 0;">Menganalisis permasalahan dengan pendekatan web (bobot 40%)</td></tr>
+      <tr><td style="padding:4px 8px 4px 0;"><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#0b1d3a;color:#4fd6d6;padding:2px 8px;border-radius:5px;">CPMK-3</span></td><td style="padding:4px 0;">Memodelkan solusi dengan pendekatan aplikasi web (bobot 40%)</td></tr>
+      <tr><td style="padding:4px 8px 4px 0;"><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#0b1d3a;color:#4fd6d6;padding:2px 8px;border-radius:5px;">CPMK-4</span></td><td style="padding:4px 0;">Mengimplementasikan &amp; menghosting aplikasi web (bobot 10%)</td></tr>
+    </table>
+    <p style="font-size:14px;margin:14px 0 6px;"><b>Bahan Kajian:</b></p>
+    <p style="font-size:13px;line-height:1.8;margin:0 0 12px;">HTML &middot; CSS &middot; Bootstrap &middot; JavaScript &middot; DOM &middot; AJAX &middot; Vue.js &middot; Hosting &middot; Front-End &middot; Back-End &middot; CRUD &middot; Data &amp; Query &middot; Report</p>
+    <p style="font-size:14px;margin:0 0 6px;"><b>Komponen Evaluasi:</b> Tugas 1 (30%) &middot; ETS (20%) &middot; Tugas 2 (25%) &middot; EAS (25%)</p>
+    <p style="font-size:13px;margin:10px 0 0;">&#128196; Dokumen RPS lengkap: [tautan/file RPS]</p>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![2. RPS (Rencana Pembelajaran Semester)](screenshot-preview/02-rps.png)
+
+---
+
+
+### 3. Kontrak Perkuliahan / Tata Tertib Kelas
+
+> **Status:** 🟢 Wajib
+
+Aturan kehadiran, etika kelas, kebijakan keterlambatan pengumpulan, dan sanksi akademik.
+
+**💡 Prompt AI:**
+
+```
+Buatkan draf kontrak perkuliahan / tata tertib kelas untuk MK Pemrograman
+Web di ITS (kelas dengan komponen praktikum), mencakup: aturan kehadiran,
+etika kelas, kebijakan keterlambatan pengumpulan tugas/source code, dan
+sanksi akademik (plagiarisme kode). Gaya bahasa formal tapi tidak kaku,
+maksimal 6 poin. Hasilkan dalam format HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Kontrak Perkuliahan</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">Tata Tertib Kelas</h2>
+  <ol style="font-size:14px;line-height:1.9;margin:0;padding-left:20px;">
+    <li>Kehadiran minimal 80% dari total pertemuan (termasuk praktikum) untuk dapat mengikuti EAS.</li>
+    <li>Toleransi keterlambatan masuk kelas/praktikum: 15 menit.</li>
+    <li>Tugas dan source code dikumpulkan melalui myITS Classroom sebelum tenggat; keterlambatan dikenai pengurangan nilai 5% per hari, maksimal 3 hari.</li>
+    <li>Laptop wajib dibawa saat sesi praktikum.</li>
+    <li>Plagiarisme kode (menyalin penuh milik orang lain tanpa modifikasi/pemahaman) diproses sesuai peraturan akademik ITS.</li>
+    <li>Pertanyaan teknis di luar jam kelas disampaikan melalui forum diskusi, dijawab maksimal 2x24 jam kerja.</li>
+    </ol>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![3. Kontrak Perkuliahan / Tata Tertib Kelas](screenshot-preview/03-kontrak.png)
+
+---
+
+
+### 4. Materi Pembelajaran per Pertemuan
+
+> **Status:** 🟢 Wajib
+
+Outline materi per pertemuan: judul section, 4–6 subtopik berurutan, poin diskusi pemantik.
+
+**💡 Prompt AI:**
+
+```
+Berdasarkan RPS minggu ke-6 dengan topik "Membuat Aplikasi Web dengan
+JavaScript dan DOM" (sub-CPMK: mahasiswa mampu mengimplementasikan
+JavaScript dan DOM untuk membuat aplikasi web), buatkan outline
+materi/slide: judul section Moodle, 4-6 subtopik berurutan, dan 1 poin
+diskusi pemantik di akhir. Hasilkan HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Materi Pembelajaran</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">Pertemuan 6 &mdash; Membuat Aplikasi Web dengan JavaScript &amp; DOM</h2>
+  <ol style="font-size:14px;line-height:1.9;margin:0 0 12px;padding-left:20px;">
+    <li>Recap: sintaks dasar JavaScript dan struktur DOM</li>
+    <li>Manipulasi elemen DOM (selecting, modifying, event listener)</li>
+    <li>Menghubungkan JavaScript dengan elemen HTML/CSS</li>
+    <li>Studi kasus: membuat form interaktif dengan validasi sederhana</li>
+    <li>Hands-on praktikum: aplikasi web sederhana berbasis JavaScript &amp; DOM</li>
+    </ol>
+    <div style="background-color:#0b1d3a;color:#fff;padding:12px 16px;border-radius:6px;font-size:13px;line-height:1.6;margin-bottom:10px;">
+    <b style="color:#4fd6d6;">Poin diskusi:</b> Kapan sebaiknya manipulasi DOM dilakukan langsung dengan JavaScript murni, dan kapan sebaiknya menggunakan framework seperti Vue.js?</div>
+    <p style="font-size:13px;margin:0;">&#128206; Sumber belajar: [slide/PDF pertemuan 6], [modul praktikum JavaScript &amp; DOM]</p>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![4. Materi Pembelajaran per Pertemuan](screenshot-preview/04-materi.png)
+
+---
+
+
+### 5. Referensi & Bacaan Tambahan
+
+> **Status:** 🔵 Anjuran
+
+Kategori referensi tambahan per topik — kata kunci pencarian (bukan judul/URL yang dikarang AI).
+
+**💡 Prompt AI:**
+
+```
+Untuk topik "JavaScript dan DOM" pada MK Pemrograman Web, sarankan 3
+kategori referensi tambahan (dokumentasi resmi, artikel/tutorial teknis,
+studi kasus industri) beserta alasan relevansinya. JANGAN mengarang
+judul/penulis/tautan — beri kata kunci pencarian saja agar diverifikasi
+manual. Hasilkan HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Referensi &amp; Bacaan Tambahan</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">JavaScript &amp; DOM</h2>
+  <ol style="font-size:14px;line-height:1.9;margin:0 0 10px;padding-left:20px;">
+    <li><b>Dokumentasi resmi</b> &mdash; cari: "MDN Web Docs JavaScript DOM manipulation" &rarr; acuan sintaks &amp; API DOM yang selalu diperbarui.</li>
+    <li><b>Artikel/tutorial teknis</b> &mdash; cari: "JavaScript DOM event handling best practices" &rarr; pola penulisan kode yang lebih rapi.</li>
+    <li><b>Studi kasus industri</b> &mdash; cari studi kasus performa web (mis. penggunaan Vanilla JS vs framework) di blog engineering perusahaan teknologi &rarr; konteks penerapan nyata.</li>
+    </ol>
+    <div style="background-color:#fff3d6;border-left:3px solid #ffb020;padding:8px 12px;font-size:12px;color:#6b5300;">&#9888; Semua judul, penulis, dan tautan perlu dicari &amp; diverifikasi manual sebelum dicantumkan ke myITS Classroom.</div>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![5. Referensi & Bacaan Tambahan](screenshot-preview/05-referensi.png)
+
+---
+
+
+### 6. Rubrik Penilaian
+
+> **Status:** 🟢 Wajib
+
+Tabel rubrik: 4 kriteria penilaian, 4 level capaian (Kurang/Cukup/Baik/Sangat Baik), bobot per kriteria.
+
+**💡 Prompt AI:**
+
+```
+Buatkan rubrik penilaian untuk Tugas 2 MK Pemrograman Web (topik: aplikasi
+web CRUD, bobot 25% dari nilai akhir). 4 kriteria penilaian, 4 level
+capaian (Kurang/Cukup/Baik/Sangat Baik), dan bobot skor tiap kriteria.
+Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Rubrik Penilaian</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">Tugas 2 &mdash; Aplikasi Web CRUD (Bobot 25%)</h2>
+  <table border="1" cellpadding="7" cellspacing="0" style="width:100%;border-collapse:collapse;font-size:12px;border-color:#e3ded0;">
+    <tr style="background-color:#0b1d3a;"><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Kriteria</th><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Bobot</th><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Kurang (1)</th><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Cukup (2)</th><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Baik (3)</th><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Sangat Baik (4)</th></tr>
+    <tr><td>Fungsionalitas CRUD lengkap</td><td>35%</td><td>&lt;2 fungsi jalan</td><td>2&ndash;3 fungsi jalan</td><td>Semua fungsi jalan</td><td>Semua fungsi jalan + validasi input</td></tr>
+    <tr style="background-color:#fff;"><td>Struktur kode &amp; database</td><td>25%</td><td>Tidak terstruktur</td><td>Cukup terstruktur</td><td>Terstruktur rapi</td><td>Terstruktur &amp; mengikuti best practice</td></tr>
+    <tr><td>Tampilan front-end</td><td>20%</td><td>Tidak responsif</td><td>Sebagian responsif</td><td>Responsif</td><td>Responsif &amp; estetik</td></tr>
+    <tr style="background-color:#fff;"><td>Ketepatan waktu</td><td>20%</td><td>Terlambat &gt;3 hari</td><td>Terlambat 1&ndash;3 hari</td><td>Tepat waktu</td><td>Lebih awal</td></tr>
+    </table>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![6. Rubrik Penilaian](screenshot-preview/06-rubrik.png)
+
+---
+
+
+### 7. Pengumuman
+
+> **Status:** 🟢 Wajib
+
+Template pengumuman di forum Announcement Moodle — pengingat tenggat dan poin teknis wajib.
+
+**💡 Prompt AI:**
+
+```
+Buatkan draf pengumuman untuk forum Announcement myITS Classroom MK
+Pemrograman Web: pengingat tenggat Tugas 1 (H-3, proyek HTML & CSS),
+nada profesional tapi ramah, sertakan poin teknis yang wajib ada.
+Maksimal 100 kata. Hasilkan HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Pengumuman</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">&#128226; Pengingat: Tenggat Tugas 1 &mdash; 3 Hari Lagi</h2>
+  <p style="font-size:14px;line-height:1.7;margin:0;">
+    Halo semua, Tugas 1 (Membuat Halaman Web Sederhana dengan HTML &amp; CSS) akan ditutup pada
+    [tanggal, jam]. Pastikan proyek kalian memuat: (1) struktur HTML semantik,
+    (2) styling CSS (layout, warna, tipografi), (3) tampilan responsif dasar,
+    dan (4) source code rapi dengan komentar. Unggah dalam format ZIP/repository
+    melalui menu Assignment di myITS Classroom.<br><br>
+    Ada kendala? Silakan tulis di Forum Diskusi ya. Semangat coding! &#128187;</p>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![7. Pengumuman](screenshot-preview/07-pengumuman.png)
+
+---
+
+
+### 8. Jadwal & Linimasa Perkuliahan
+
+> **Status:** 🟢 Wajib
+
+Tabel linimasa per minggu: tenggat tugas, ujian, dan bobot penilaiannya.
+
+**💡 Prompt AI:**
+
+```
+Berdasarkan RPS 16 minggu MK Pemrograman Web [lampirkan RPS], susun
+tabel linimasa yang menandai minggu mana saja ada tenggat tugas/ujian
+beserta bobotnya, untuk ditempel di section pengantar myITS Classroom.
+Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Jadwal &amp; Linimasa</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">Linimasa Tugas &amp; Ujian</h2>
+  <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse;font-size:13px;border-color:#e3ded0;">
+    <tr style="background-color:#0b1d3a;"><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Minggu</th><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Aktivitas</th><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Bobot</th></tr>
+    <tr><td>2</td><td>Tugas 1 dibuka (HTML)</td><td><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#0b1d3a;color:#4fd6d6;padding:2px 8px;border-radius:5px;">10%</span></td></tr>
+    <tr style="background-color:#fff;"><td>3</td><td>Tugas 1 lanjutan (CSS)</td><td><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#0b1d3a;color:#4fd6d6;padding:2px 8px;border-radius:5px;">10%</span></td></tr>
+    <tr><td>6</td><td>Tugas 1 ditutup (JS &amp; DOM)</td><td><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#0b1d3a;color:#4fd6d6;padding:2px 8px;border-radius:5px;">10%</span></td></tr>
+    <tr style="background-color:#fff;"><td>8</td><td>ETS (Evaluasi 1)</td><td><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#ffb020;color:#0b1d3a;padding:2px 8px;border-radius:5px;">20%</span></td></tr>
+    <tr><td>13</td><td>Tugas 2 ditutup (CRUD)</td><td><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#0b1d3a;color:#4fd6d6;padding:2px 8px;border-radius:5px;">25%</span></td></tr>
+    <tr style="background-color:#fff;"><td>16</td><td>EAS (Evaluasi 2)</td><td><span style="font-family:'Courier New',monospace;font-size:11px;background-color:#ffb020;color:#0b1d3a;padding:2px 8px;border-radius:5px;">25%</span></td></tr>
+    </table>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![8. Jadwal & Linimasa Perkuliahan](screenshot-preview/08-linimasa.png)
+
+---
+
+## B. Aktivitas Pembelajaran
+
+
+### 9. Forum Diskusi
+
+> **Status:** 🟢 Wajib
+
+Pertanyaan pemantik utama + 2 sub-pertanyaan pendukung yang mendorong argumen — bukan sekedar definisi.
+
+**💡 Prompt AI:**
+
+```
+Buatkan 1 topik forum diskusi untuk materi "JavaScript dan DOM" (minggu
+5–6), berupa 1 pertanyaan pemantik utama + 2 sub-pertanyaan pendukung
+yang mendorong mahasiswa berargumen, bukan sekadar menjawab definisi.
+Hasilkan HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Forum Diskusi</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">&#128187; Diskusi Minggu 5&ndash;6 &mdash; JavaScript &amp; DOM</h2>
+  <p style="font-size:14px;line-height:1.7;margin:0 0 10px;"><b>Pertanyaan utama:</b> Dalam kasus apa memanipulasi DOM langsung dengan JavaScript lebih masuk akal dibanding memakai framework seperti Vue.js, dan sebaliknya?</p>
+    <ul style="font-size:14px;line-height:1.8;margin:0 0 10px;padding-left:20px;">
+    <li>Sub-pertanyaan 1: Apa risiko performa jika manipulasi DOM dilakukan berlebihan tanpa framework?</li>
+    <li>Sub-pertanyaan 2: Fitur reactive data binding pada framework menyelesaikan masalah apa yang sulit ditangani JavaScript murni?</li>
+    </ul>
+    <p style="font-size:13px;color:#5b6b8c;margin:0;">Balas minimal 1 argumen orisinal + 1 tanggapan ke argumen teman sekelas.</p>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![9. Forum Diskusi](screenshot-preview/09-forum.png)
+
+---
+
+
+### 10. Penugasan (Assignment)
+
+> **Status:** 🟢 Wajib
+
+Instruksi lengkap tugas: deskripsi, format pengumpulan, tenggat, dan acuan rubrik penilaian.
+
+**💡 Prompt AI:**
+
+```
+Buatkan instruksi lengkap Tugas 1 MK Pemrograman Web (topik: halaman web
+sederhana dengan HTML & CSS, bobot 30%), mencakup: deskripsi tugas,
+format pengumpulan, dan tenggat. Gunakan rubrik penilaian sebagai acuan.
+Hasilkan HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Penugasan (Assignment)</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">&#128204; Tugas 1 &mdash; Halaman Web Sederhana dengan HTML &amp; CSS (Bobot: 30%)</h2>
+  <p style="font-size:14px;line-height:1.7;margin:0 0 10px;"><b>Deskripsi:</b><br>
+    Bangun 1 halaman web profil/portofolio sederhana menggunakan HTML dan CSS murni (boleh
+    memanfaatkan Bootstrap pada bagian layout). Halaman wajib memuat: header/navigasi,
+    bagian konten utama (minimal 2 section), dan footer, dengan tampilan responsif dasar
+    (desktop &amp; mobile).</p>
+    <p style="font-size:13px;line-height:1.8;margin:0;">
+    <span style="display:block;color:#5b6b8c;font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;">format pengumpulan</span>ZIP source code atau tautan repository, melalui menu Assignment.<br><br>
+    <span style="display:block;color:#5b6b8c;font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;">tenggat</span>[tanggal, jam] &mdash; minggu ke-6.<br><br>
+    <span style="display:block;color:#5b6b8c;font-family:'Courier New',monospace;font-size:11px;text-transform:uppercase;">penilaian</span>mengikuti rubrik 4 kriteria pada tugas terkait.</p>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![10. Penugasan (Assignment)](screenshot-preview/10-assignment.png)
+
+---
+
+
+### 11. Kuis / Evaluasi Formatif
+
+> **Status:** 🟢 Wajib
+
+Berbagai jenis soal evaluasi formatif di myITS Classroom — semua tersedia dalam **Moodle XML siap import**.
+
+| Jenis Soal | File XML |
+|-----------|---------|
+| Pilihan Ganda (radio) | [`moodle-quiz-xml/01-pilihan-ganda.xml`](moodle-quiz-xml/01-pilihan-ganda.xml) |
+| Checkbox / Multi-Jawaban | [`moodle-quiz-xml/02-checkbox-multi-jawaban.xml`](moodle-quiz-xml/02-checkbox-multi-jawaban.xml) |
+| Mencocokkan (Matching) | [`moodle-quiz-xml/03-mencocokkan.xml`](moodle-quiz-xml/03-mencocokkan.xml) |
+| Benar / Salah (True/False) | [`moodle-quiz-xml/04-benar-salah.xml`](moodle-quiz-xml/04-benar-salah.xml) |
+| Isian Singkat (Short Answer) | [`moodle-quiz-xml/05-isian-singkat.xml`](moodle-quiz-xml/05-isian-singkat.xml) |
+| Esai + rubrik + template | [`moodle-quiz-xml/06-esai.xml`](moodle-quiz-xml/06-esai.xml) |
+| Drag & Drop ke Teks | [`moodle-quiz-xml/07-drag-drop-teks.xml`](moodle-quiz-xml/07-drag-drop-teks.xml) |
+| **Semua Jenis (21 soal)** | [`moodle-quiz-xml/00-bank-soal-lengkap.xml`](moodle-quiz-xml/00-bank-soal-lengkap.xml) |
+
+> **Cara Import:** Moodle → Admin → Bank Soal → Import → Format: **Moodle XML** → Upload → Import
+
+#### Prompt AI — Pilihan Ganda (Single Answer)
+
+```
+Buatkan [N] soal pilihan ganda (single answer) topik "[TOPIK]" untuk
+MK Pemrograman Web, tingkat kesulitan [mudah/menengah/sulit].
+Setiap soal: 1 jawaban benar (fraction="100") dan 3 pengecoh masuk akal
+(fraction="0"), plus umpan balik singkat tiap opsi.
+Output Moodle XML (<quiz>...</quiz>), encoding UTF-8.
+```
+
+#### Prompt AI — Checkbox / Multi-Jawaban
+
+```
+Buatkan [N] soal checkbox (multi-jawaban, >1 jawaban benar) topik
+"[TOPIK]" untuk MK Pemrograman Web. Setiap soal: 2–3 jawaban benar
+dengan partial credit (fraction total = 100), 2 pengecoh (fraction
+negatif). Gunakan <single>false</single>. Output Moodle XML.
+```
+
+#### Prompt AI — Mencocokkan (Matching)
+
+```
+Buatkan [N] soal mencocokkan (matching) topik "[TOPIK]". Setiap soal:
+4–5 pasangan konsep↔definisi. Format: tiap pasangan dalam <subquestion>
+berisi <text> (kiri) dan <answer><text> (kanan).
+Output Moodle XML dengan <question type="matching">.
+```
+
+#### Prompt AI — Benar / Salah (True/False)
+
+```
+Buatkan [N] pernyataan Benar/Salah topik "[TOPIK]". Campurkan yang
+benar dan salah. Sertakan penjelasan di <generalfeedback> mengapa
+pernyataan itu benar/salah. Output Moodle XML dengan
+<question type="truefalse">.
+```
+
+#### Prompt AI — Isian Singkat (Short Answer)
+
+```
+Buatkan [N] soal isian singkat topik "[TOPIK]". Jawaban berupa 1
+kata/frase pendek yang spesifik. Sertakan variasi penulisan yang
+diterima. Gunakan <usecase>0</usecase> (case-insensitive).
+Output Moodle XML dengan <question type="shortanswer">.
+```
+
+#### Prompt AI — Esai (Essay)
+
+```
+Buatkan [N] soal esai topik "[TOPIK]" yang mengukur analisis/evaluasi.
+Sertakan: <responsetemplate> (kerangka jawaban untuk mahasiswa) dan
+<graderinfo> (rubrik penilaian untuk dosen). Gunakan
+<responsefieldlines>15</responsefieldlines>.
+Output Moodle XML dengan <question type="essay">.
+```
+
+#### Prompt AI — Drag & Drop ke Teks (ddwtos)
+
+```
+Buatkan [N] soal drag-and-drop ke teks topik "[TOPIK]". Soal berupa
+kode/paragraf dengan kata kunci dihapus dan diganti [[1]], [[2]], dst.
+Sediakan pilihan kata tepat + pengecoh. Output Moodle XML dengan
+<question type="ddwtos">.
+```
+
+**📋 Contoh Hasil — HTML Tampilan Kuis di Moodle:**
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Kuis / Evaluasi Formatif</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">Kuis &mdash; Dasar HTML &amp; CSS</h2>
+  <div style="font-size:14px;line-height:1.8;margin-bottom:14px;">
+    <b>1. Tag HTML yang tepat untuk membuat daftar bernomor adalah...</b><br>
+    a) &lt;ul&gt; &nbsp; b) &lt;ol&gt; &nbsp; c) &lt;li&gt; &nbsp; d) &lt;dl&gt;<br>
+    <span style="color:#1a7a4c;"><b>Jawaban: b</b> &mdash; &lt;ol&gt; (ordered list) menghasilkan daftar bernomor.</span>
+    </div>
+    <div style="font-size:14px;line-height:1.8;margin-bottom:14px;">
+    <b>2. Properti CSS untuk mengatur jarak antar elemen di dalam border adalah...</b><br>
+    a) margin &nbsp; b) padding &nbsp; c) gap &nbsp; d) spacing<br>
+    <span style="color:#1a7a4c;"><b>Jawaban: b</b> &mdash; padding mengatur jarak di dalam elemen, margin di luar elemen.</span>
+    </div>
+    <p style="font-size:13px;color:#5b6b8c;margin:0;">(dst. &mdash; total 5 soal dengan pola serupa)</p>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![Preview Kuis / Evaluasi Formatif](screenshot-preview/11-kuis.png)
+
+---
+
+
+### 12. Presensi Daring
+
+> **Status:** 🔵 Anjuran
+
+Kebijakan presensi via modul Attendance Moodle: cara, batas waktu, konsekuensi ketidakhadiran.
+
+**💡 Prompt AI:**
+
+```
+Buatkan draf kebijakan singkat presensi daring untuk dicantumkan di
+myITS Classroom: cara presensi (modul Attendance), batas waktu presensi
+dibuka per sesi kuliah/praktikum, konsekuensi jika tidak presensi.
+Hasilkan HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Presensi Daring</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">&#128203; Kebijakan Presensi</h2>
+  <p style="font-size:14px;line-height:1.7;margin:0;">
+    Presensi dilakukan melalui modul Attendance di myITS Classroom, dibuka
+    15 menit sebelum sesi kuliah/praktikum dimulai hingga 15 menit setelah sesi
+    berakhir. Mahasiswa yang tidak presensi dalam rentang waktu tersebut dianggap
+    tidak hadir kecuali ada konfirmasi tertulis (sakit/izin) maksimal 2x24 jam
+    setelah sesi.</p>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![12. Presensi Daring](screenshot-preview/12-presensi.png)
+
+---
+
+
+### 13. ETS & EAS
+
+> **Status:** 🟢 Wajib
+
+Kisi-kisi ETS/EAS dalam tabel (minggu, materi, bentuk soal) dan contoh soal pemahaman + penerapan.
+
+**💡 Prompt AI:**
+
+```
+Berdasarkan CPMK-1 dan CPMK-2 (materi minggu 1–7) MK Pemrograman Web,
+buatkan kisi-kisi ETS (tabel: minggu, materi, bentuk soal) dan 2 contoh
+soal yang mengukur pemahaman konsep + penerapan praktik.
+Hasilkan dalam format tabel HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">ETS &amp; EAS</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">Kisi-Kisi ETS (Evaluasi 1)</h2>
+  <table border="1" cellpadding="7" cellspacing="0" style="width:100%;border-collapse:collapse;font-size:12px;border-color:#e3ded0;margin-bottom:14px;">
+    <tr style="background-color:#0b1d3a;"><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Minggu</th><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Materi</th><th style="color:#fff;text-align:left;font-family:'Courier New',monospace;font-size:11px;">Bentuk Soal</th></tr>
+    <tr><td>1&ndash;3</td><td>Teknologi web, HTML, CSS</td><td>Pilihan ganda + praktik</td></tr>
+    <tr style="background-color:#fff;"><td>4</td><td>Framework Bootstrap</td><td>Pilihan ganda</td></tr>
+    <tr><td>5&ndash;6</td><td>JavaScript &amp; DOM</td><td>Praktik (studi kasus)</td></tr>
+    <tr style="background-color:#fff;"><td>7</td><td>AJAX</td><td>Esai singkat</td></tr>
+    </table>
+    <p style="font-size:14px;margin:0 0 6px;"><b>Contoh soal:</b></p>
+    <ol style="font-size:14px;line-height:1.8;margin:0;padding-left:20px;">
+    <li>Jelaskan perbedaan elemen HTML block-level dan inline, beserta contohnya.</li>
+    <li>Buat potongan kode JavaScript untuk mengambil elemen dengan id "form-login" dan menampilkan pesan validasi saat tombol submit ditekan.</li>
+    </ol>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![13. ETS & EAS](screenshot-preview/13-uts-uas.png)
+
+---
+
+
+### 14. Sesi Sinkron (Live Session)
+
+> **Status:** 🔵 Anjuran
+
+Agenda sesi sinkron BigBlueButton/Zoom 90 menit dengan pembagian waktu yang jelas.
+
+**💡 Prompt AI:**
+
+```
+Buatkan agenda sesi sinkron (BigBlueButton/Zoom) 90 menit untuk topik
+"Membangun Back-End" (minggu 12), dengan pembagian waktu jelas dan
+sesi tanya-jawab. Hasilkan dalam format tabel HTML inline-style siap
+tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Sesi Sinkron (Live Session)</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">&#128421;&#65039; Minggu 12: Membangun Back-End</h2>
+  <p style="font-size:13px;margin:0 0 10px;">Tautan: [BigBlueButton/Zoom link] &middot; Durasi: 90 menit</p>
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+    <tr><td style="padding:4px 10px 4px 0;color:#5b6b8c;font-family:'Courier New',monospace;font-size:12px;">00:00&ndash;10:00</td><td style="padding:4px 0;">Pembukaan &amp; recap materi Front-End</td></tr>
+    <tr><td style="padding:4px 10px 4px 0;color:#5b6b8c;font-family:'Courier New',monospace;font-size:12px;">10:00&ndash;40:00</td><td style="padding:4px 0;">Pemaparan struktur Back-End &amp; routing API</td></tr>
+    <tr><td style="padding:4px 10px 4px 0;color:#5b6b8c;font-family:'Courier New',monospace;font-size:12px;">40:00&ndash;65:00</td><td style="padding:4px 0;">Demo langsung: membuat endpoint API sederhana</td></tr>
+    <tr><td style="padding:4px 10px 4px 0;color:#5b6b8c;font-family:'Courier New',monospace;font-size:12px;">65:00&ndash;80:00</td><td style="padding:4px 0;">Praktik mandiri: menghubungkan endpoint ke front-end</td></tr>
+    <tr><td style="padding:4px 10px 4px 0;color:#5b6b8c;font-family:'Courier New',monospace;font-size:12px;">80:00&ndash;90:00</td><td style="padding:4px 0;">Tanya-jawab &amp; pengumuman Tugas 2 (CRUD)</td></tr>
+    </table>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![14. Sesi Sinkron (Live Session)](screenshot-preview/14-live-session.png)
+
+---
+
+
+### 15. Survei / Umpan Balik
+
+> **Status:** 🔵 Anjuran
+
+Survei akhir semester: 3 pernyataan Likert 1–5 dan 2 pertanyaan terbuka untuk evaluasi pembelajaran.
+
+**💡 Prompt AI:**
+
+```
+Buatkan survei umpan balik pembelajaran menjelang akhir semester untuk MK
+Pemrograman Web: 3 pertanyaan skala Likert 1–5 dan 2 pertanyaan terbuka,
+fokus pada kejelasan materi, kecukupan praktikum, dan saran perbaikan.
+Hasilkan HTML inline-style siap tempel Moodle.
+```
+
+**📋 Contoh Hasil — HTML Siap Tempel ke Moodle:**
+
+> Salin kode di bawah → di Moodle klik ikon **`</>` Edit HTML source** → tempel → klik Update.
+
+```html
+<div style="background-color:#f7f5ef;border-radius:8px;padding:20px 22px;font-family:Arial, Helvetica, sans-serif;color:#0b1d3a;max-width:820px;">
+  <div style="font-family:'Courier New', Courier, monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5b6b8c;margin-bottom:6px;">Survei / Umpan Balik</div>
+  <h2 style="font-size:18px;margin:0 0 12px;color:#0b1d3a;">Survei Umpan Balik Pembelajaran</h2>
+  <p style="font-size:14px;margin:0 0 6px;"><b>Skala 1 (Sangat Tidak Setuju) &ndash; 5 (Sangat Setuju):</b></p>
+    <ol style="font-size:14px;line-height:1.8;margin:0 0 12px;padding-left:20px;">
+    <li>Materi perkuliahan disampaikan dengan jelas dan mudah dipahami.</li>
+    <li>Sesi praktikum cukup membantu memahami implementasi teknis.</li>
+    <li>Umpan balik atas tugas diberikan tepat waktu dan membantu.</li>
+    </ol>
+    <p style="font-size:14px;margin:0 0 6px;"><b>Pertanyaan terbuka:</b></p>
+    <ol start="4" style="font-size:14px;line-height:1.8;margin:0;padding-left:20px;">
+    <li>Bagian materi mana yang menurut Anda paling sulit dipahami? Mengapa?</li>
+    <li>Apa saran Anda untuk perbaikan MK ini di semester berikutnya?</li>
+    </ol>
+</div>
+```
+
+**🖼️ Preview tampilan di myITS Classroom:**
+
+![15. Survei / Umpan Balik](screenshot-preview/15-survei.png)
+
+---
+
+
+## 💡 Tips Prompting Efektif
+
+### 1. 📎 Selalu lampirkan RPS sebagai konteks
+
+AI tidak tahu detail mata kuliah Anda — tanpa RPS, hasilnya generik dan sering tidak akurat.
+
+```
+# Pembuka percakapan yang direkomendasikan:
+"Berikut RPS MK Pemrograman Web saya: [paste isi RPS atau upload file PDF/DOCX].
+Gunakan ini sebagai konteks untuk semua pertanyaan saya berikutnya."
+```
+
+### 2. 📐 Minta format output yang spesifik
+
+```
+# Untuk Moodle (HTML):
+"Output dalam format HTML dengan inline style, siap ditempel ke Edit HTML source Moodle.
+Jangan gunakan class CSS eksternal."
+
+# Untuk kuis (XML):
+"Output dalam format Moodle XML (<quiz>...</quiz>), encoding UTF-8,
+siap di-import via Admin > Bank Soal > Import > Format Moodle XML."
+```
+
+### 3. 🔍 Untuk referensi — minta kata kunci, bukan judul jadi
+
+```
+# ❌ Hindari:  "Berikan 5 referensi lengkap dengan URL."
+# ✅ Lakukan:  "Beri kata kunci pencarian per kategori untuk saya verifikasi sendiri."
+```
+
+### 4. 🧩 Iterasi per bagian kecil, bukan sekaligus
+
+Meminta AI mengisi 16 minggu sekaligus menurunkan kualitas. Buat per pertemuan/topik, review, baru lanjut.
+
+### 5. ✅ Verifikasi angka bobot penilaian
+
+AI sering membuat kesalahan penjumlahan. Setelah dapat komponen evaluasi, cek: **total bobot = 100%?**
+
+---
+
+| Masalah | Solusi |
+|---------|--------|
+| Output terlalu generik | Tambahkan lebih banyak konteks RPS di prompt |
+| Bobot evaluasi salah | Sebutkan angka persis: "Tugas 30%, ETS 20%, Tugas 2 25%, EAS 25%" |
+| HTML tidak muncul di Moodle | Pastikan paste via ikon `</>` Edit HTML source, bukan kotak teks biasa |
+| Referensi terlihat karangan | Minta kata kunci pencarian, bukan judul/URL langsung |
+| Soal XML gagal import | Cek encoding UTF-8 dan karakter khusus yang perlu di-escape |
+
 
 ---
 
