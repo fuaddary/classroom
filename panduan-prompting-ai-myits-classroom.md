@@ -60,6 +60,10 @@ melalui praktikum dan proyek CRUD.
 Kontak & Jam Konsultasi: [rosyadi@its.ac.id] · [Hari, jam, ruang/tautan]
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview Identitas & Informasi Umum](screenshot-preview/01-identitas.png)
+
 ---
 
 ### 2. RPS (Rencana Pembelajaran Semester)
@@ -98,6 +102,10 @@ Front-End · Back-End · CRUD · Data & Query · Report
 📄 Dokumen RPS lengkap: [tautan/file RPS]
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview RPS](screenshot-preview/02-rps.png)
+
 ---
 
 ### 3. Kontrak Perkuliahan / Tata Tertib Kelas
@@ -126,6 +134,10 @@ myITS Classroom.
 6. Pertanyaan teknis di luar jam kelas disampaikan melalui forum diskusi
    atau kanal resmi kelas, dijawab maksimal dalam 2x24 jam kerja.
 ```
+
+**Preview tampilan di myITS Classroom:**
+
+![Preview Kontrak Perkuliahan](screenshot-preview/03-kontrak.png)
 
 ---
 
@@ -157,6 +169,10 @@ heading.
 📎 Sumber belajar: [slide/PDF pertemuan 6], [modul praktikum JavaScript & DOM]
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview Materi Pembelajaran](screenshot-preview/04-materi.png)
+
 ---
 
 ### 5. Referensi & Bacaan Tambahan
@@ -184,6 +200,10 @@ pencarian saja agar saya cari & verifikasi sendiri sumber aslinya.
 manual sebelum dicantumkan ke myITS Classroom.
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview Referensi & Bacaan Tambahan](screenshot-preview/05-referensi.png)
+
 ---
 
 ### 6. Rubrik Penilaian
@@ -205,6 +225,10 @@ skor tiap kriteria. Format tabel markdown.
 | Tampilan front-end             | 20%   | Tidak responsif     | Sebagian responsif     | Responsif                 | Responsif & estetik                       |
 | Ketepatan waktu                | 20%   | Terlambat >3 hari   | Terlambat 1–3 hari     | Tepat waktu                | Lebih awal                                |
 ```
+
+**Preview tampilan di myITS Classroom:**
+
+![Preview Rubrik Penilaian](screenshot-preview/06-rubrik.png)
 
 ---
 
@@ -232,6 +256,10 @@ Classroom.
 Ada kendala? Silakan tulis di Forum Diskusi ya. Semangat coding! 💻
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview Pengumuman](screenshot-preview/07-pengumuman.png)
+
 ---
 
 ### 8. Jadwal & Linimasa Perkuliahan
@@ -255,6 +283,10 @@ tabel markdown.
 | 13     | Tugas 2 ditutup (CRUD)     | 25%   |
 | 16     | EAS (Evaluasi 2)           | 25%   |
 ```
+
+**Preview tampilan di myITS Classroom:**
+
+![Preview Jadwal & Linimasa](screenshot-preview/08-linimasa.png)
 
 ---
 
@@ -285,6 +317,10 @@ dan sebaliknya?
 Balas minimal 1 argumen orisinal + 1 tanggapan ke argumen teman sekelas.
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview Forum Diskusi](screenshot-preview/09-forum.png)
+
 ---
 
 ### 10. Penugasan (Assignment)
@@ -313,6 +349,10 @@ Tenggat: [tanggal, jam] — minggu ke-6.
 Penilaian: mengikuti rubrik 4 kriteria pada tugas terkait.
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview Penugasan (Assignment)](screenshot-preview/10-assignment.png)
+
 ---
 
 ### 11. Kuis / Evaluasi Formatif
@@ -338,6 +378,10 @@ singkat tiap jawaban.
 3. (dst. — total 5 soal dengan pola serupa)
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview Kuis / Evaluasi Formatif](screenshot-preview/11-kuis.png)
+
 ---
 
 ### 12. Presensi Daring
@@ -359,6 +403,10 @@ sesi berakhir. Mahasiswa yang tidak presensi dalam rentang waktu tersebut
 dianggap tidak hadir kecuali ada konfirmasi tertulis (sakit/izin)
 maksimal 2x24 jam setelah sesi.
 ```
+
+**Preview tampilan di myITS Classroom:**
+
+![Preview Presensi Daring](screenshot-preview/12-presensi.png)
 
 ---
 
@@ -387,6 +435,10 @@ soal yang mengukur pemahaman konsep + penerapan praktik.
    "form-login" dan menampilkan pesan validasi saat tombol submit ditekan.
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview ETS & EAS](screenshot-preview/13-uts-uas.png)
+
 ---
 
 ### 14. Sesi Sinkron (Live Session)
@@ -410,6 +462,10 @@ Tautan: [BigBlueButton/Zoom link] · Durasi: 90 menit
 80:00–90:00  Tanya-jawab & pengumuman Tugas 2 (CRUD)
 ```
 
+**Preview tampilan di myITS Classroom:**
+
+![Preview Sesi Sinkron (Live Session)](screenshot-preview/14-live-session.png)
+
 ---
 
 ### 15. Survei / Umpan Balik
@@ -432,6 +488,10 @@ fokus pada kejelasan materi, kecukupan praktikum, dan saran perbaikan.
 4. Bagian materi mana yang menurut Anda paling sulit dipahami? Mengapa?
 5. Apa saran Anda untuk perbaikan MK ini di semester berikutnya?
 ```
+
+**Preview tampilan di myITS Classroom:**
+
+![Preview Survei / Umpan Balik](screenshot-preview/15-survei.png)
 
 ---
 
